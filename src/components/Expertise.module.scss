@@ -1,0 +1,115 @@
+.expertise {
+  position: relative;
+  padding-block: fluid(96, 200);
+  border-top: 1px solid var(--edge);
+}
+
+.inner {
+  @include container;
+  display: grid;
+  gap: fluid(40, 80);
+  @include lg {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    grid-template-areas:
+      "header header"
+      "years platforms";
+    align-items: start;
+  }
+}
+
+.header {
+  display: grid;
+  gap: 20px;
+  @include lg { grid-area: header; grid-template-columns: 1fr 1fr; align-items: end; }
+}
+
+.years {
+  display: grid;
+  gap: 8px;
+  @include lg {
+    grid-area: years;
+    position: sticky;
+    top: calc(var(--nav-h) + 40px);
+  }
+}
+.yearsValue {
+  @include display(125, 900);
+  font-size: fluid(120, 260);
+  line-height: 0.8;
+  color: var(--paper);
+  letter-spacing: -0.06em;
+}
+.yearsLabel {
+  @include signage(118, 700);
+  color: var(--paper-3);
+  padding-left: 0.2em;
+}
+
+.platforms {
+  display: grid;
+  @include lg { grid-area: platforms; }
+}
+
+.platform {
+  display: grid;
+  gap: 20px;
+  padding-block: fluid(28, 44);
+  border-top: 1px solid var(--edge);
+  &:last-child { border-bottom: 1px solid var(--edge); }
+}
+
+.platformTitle {
+  @include signage(118, 700);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--paper-2);
+}
+.platformIndex {
+  @include mono(700);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--station);
+  color: var(--ink-0);
+  font-size: 0.8rem;
+  transition: background-color 0.8s var(--ease-out);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+}
+
+.skill {
+  @include display(108, 700);
+  position: relative;
+  font-size: fluid(24, 46);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--paper);
+  overflow: hidden;
+  cursor: default;
+  height: 1.15em;
+  transform-style: preserve-3d;
+  perspective: 500px;
+
+  .skillFace {
+    display: block;
+    transition: transform 0.55s var(--ease-out), color 0.3s;
+    &:nth-child(2) {
+      position: absolute;
+      inset: 0;
+      color: var(--station);
+      transform: translateY(100%);
+    }
+  }
+
+  @include hover {
+    .skillFace:first-child { transform: translateY(-100%); }
+    .skillFace:nth-child(2) { transform: translateY(0); }
+  }
+}

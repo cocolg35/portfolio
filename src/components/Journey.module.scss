@@ -1,0 +1,310 @@
+.journey {
+  position: relative;
+  padding-block: fluid(80, 160) fluid(60, 120);
+  isolation: isolate;
+}
+
+.glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60vw 60vw at 85% 20%, rgba(var(--station-rgb), 0.16), transparent 70%),
+    radial-gradient(50vw 50vw at 10% 90%, rgba(var(--station-rgb), 0.08), transparent 70%);
+  transition: background 1.2s var(--ease-out);
+  opacity: 0;
+  @supports (animation-timeline: view()) {
+    opacity: 1;
+  }
+  .journey:has([data-active]) & { opacity: 1; }
+}
+
+.header {
+  @include container;
+  display: grid;
+  gap: 20px;
+  margin-bottom: fluid(48, 120);
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+}
+
+.track {
+  @include container;
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 16px;
+  @include md { grid-template-columns: 72px 1fr; gap: 32px; }
+  @include lg { grid-template-columns: 96px 1fr; gap: 48px; }
+}
+
+/* ---------- rail ---------- */
+.rail {
+  position: relative;
+  --line-x: 50%;
+}
+
+.railGhost,
+.railFill {
+  position: absolute;
+  left: var(--line-x);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  translate: -50% 0;
+  border-radius: 999px;
+}
+.railGhost { background: rgba(255, 255, 255, 0.07); }
+.railFill {
+  background: linear-gradient(to bottom, var(--signal), var(--station) 60%, var(--station));
+  transform-origin: top;
+  transition: background 0.8s var(--ease-out);
+}
+
+.railStop {
+  position: absolute;
+  left: var(--line-x);
+  width: 16px;
+  height: 16px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--ink-0);
+  border: 4px solid var(--stop);
+  transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+  @include md { width: 20px; height: 20px; border-width: 5px; }
+  &[data-active] {
+    transform: scale(1.35);
+    box-shadow: 0 0 0 6px rgba(var(--station-rgb), 0.18);
+  }
+}
+
+.marker {
+  position: sticky;
+  top: 55vh;
+  display: block;
+  height: 0;
+  z-index: 2;
+}
+.markerDot {
+  position: absolute;
+  left: var(--line-x);
+  translate: -50% -50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: 0 0 0 3px var(--ink-0), 0 0 22px rgba(255, 255, 255, 0.8);
+}
+.markerLabel {
+  @include signage(118, 700);
+  display: none;
+  position: absolute;
+  right: calc(100% - var(--line-x) + 14px);
+  top: 0;
+  translate: 0 -50%;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  transform-origin: center;
+  color: var(--paper-3);
+  @include lg { display: block; }
+}
+
+/* ---------- stations ---------- */
+.stations {
+  display: grid;
+  gap: fluid(96, 200);
+  min-width: 0;
+}
+
+.station {
+  min-width: 0;
+  display: grid;
+  gap: fluid(28, 48);
+}
+
+.head {
+  display: grid;
+  gap: 10px;
+}
+
+.years {
+  @include mono(600);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: fluid(14, 20);
+  color: var(--s);
+  letter-spacing: 0.04em;
+}
+.yearsSep {
+  width: 36px;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.company {
+  @include display(104, 850);
+  --glyph: 0.78;
+  --longest: 8;
+  /* never break inside a word: shrink so the longest word fits the column */
+  font-size: min(#{fluid(44, 128)}, calc(min(80vw, 1150px) / (var(--glyph) * var(--longest))));
+  text-transform: uppercase;
+  color: var(--paper);
+  line-height: 0.9;
+  overflow-wrap: normal;
+  @include md {
+    font-variation-settings: "wdth" 122, "wght" 850;
+    --glyph: 0.94;
+  }
+}
+
+.role {
+  font-size: fluid(16, 21);
+  color: var(--paper-2);
+  font-variation-settings: "wdth" 100, "wght" 500;
+}
+.roleSep { margin-inline: 0.6em; color: var(--paper-3); }
+
+.body {
+  display: grid;
+  gap: fluid(32, 56);
+  align-items: start;
+  @include lg {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+  @include xl {
+    .station:nth-child(even) & {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      .text { order: 2; }
+      .visual { order: 1; }
+    }
+  }
+}
+
+.text {
+  display: grid;
+  gap: 22px;
+  max-width: 62ch;
+}
+
+.tagline {
+  @include display(108, 700);
+  font-size: fluid(22, 34);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+}
+
+.narrative {
+  color: var(--paper-2);
+  font-size: fluid(16, 18);
+  text-wrap: pretty;
+}
+
+.bullets {
+  display: grid;
+  gap: 12px;
+  li {
+    position: relative;
+    padding-left: 24px;
+    color: var(--paper-2);
+    font-size: 0.98rem;
+    line-height: 1.5;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 12px;
+      height: 2px;
+      background: var(--s);
+    }
+  }
+}
+
+.figures {
+  margin: 8px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  border-top: 1px solid var(--edge);
+}
+.figure {
+  display: grid;
+  gap: 4px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--edge);
+  dd {
+    @include display(112, 800);
+    margin: 0;
+    font-size: fluid(28, 44);
+    color: var(--s);
+    order: -1;
+    line-height: 1;
+  }
+  dt {
+    font-size: 0.85rem;
+    color: var(--paper-3);
+  }
+}
+.figuresNote {
+  grid-column: 1 / -1;
+  @include mono(400);
+  font-size: 0.68rem;
+  color: var(--paper-3);
+  padding-top: 10px;
+}
+
+.stackLabel {
+  @include signage(118, 700);
+  color: var(--paper-3);
+  margin-top: 6px;
+}
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: -12px;
+  li {
+    @include mono(500);
+    font-size: 0.74rem;
+    padding: 0.55em 0.9em;
+    border-radius: 6px;
+    border: 1px solid rgba(var(--s-rgb), 0.35);
+    color: var(--paper);
+    background: rgba(var(--s-rgb), 0.08);
+  }
+}
+
+.visual {
+  min-width: 0;
+  display: grid;
+  gap: 14px;
+  --station: var(--s);
+  --station-rgb: var(--s-rgb);
+}
+.visualBody {
+  min-width: 0;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  font-size: 0.78rem;
+  color: var(--paper-3);
+}
+.captionTag {
+  @include signage(118, 700);
+  font-size: 0.6rem;
+  padding: 0.55em 0.8em;
+  border-radius: 4px;
+  &[data-kind="real"] { background: rgba(var(--s-rgb), 0.16); color: var(--paper); }
+  &[data-kind="illustration"] { border: 1px dashed var(--edge-strong); color: var(--paper-2); }
+}

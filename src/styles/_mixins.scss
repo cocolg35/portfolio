@@ -1,0 +1,68 @@
+@use "sass:math";
+
+$bp-sm: 560px;
+$bp-md: 820px;
+$bp-lg: 1080px;
+$bp-xl: 1400px;
+
+@mixin sm { @media (min-width: $bp-sm) { @content; } }
+@mixin md { @media (min-width: $bp-md) { @content; } }
+@mixin lg { @media (min-width: $bp-lg) { @content; } }
+@mixin xl { @media (min-width: $bp-xl) { @content; } }
+@mixin motion-ok { @media (prefers-reduced-motion: no-preference) { @content; } }
+@mixin motion-off { @media (prefers-reduced-motion: reduce) { @content; } }
+@mixin hover { @media (hover: hover) and (pointer: fine) { &:hover { @content; } } }
+
+// Fluid size between two viewport widths (rem in, rem out)
+@function fluid($min, $max, $vw-min: 360, $vw-max: 1440) {
+  $slope: math.div($max - $min, $vw-max - $vw-min);
+  $intercept: $min - $slope * $vw-min;
+  @return clamp(#{$min}px, #{$intercept}px + #{$slope * 100}vw, #{$max}px);
+}
+
+@mixin display($wdth: 112, $wght: 700) {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" $wdth, "wght" $wght;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+@mixin signage($wdth: 120, $wght: 600) {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" $wdth, "wght" $wght;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+@mixin mono($wght: 500) {
+  font-family: var(--font-mono);
+  font-weight: $wght;
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+@mixin container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+@mixin screen-frame {
+  background: var(--ink-2);
+  border: 1px solid var(--edge);
+  border-radius: 14px;
+  box-shadow:
+    0 30px 60px -20px rgba(0, 0, 0, 0.7),
+    0 12px 24px -12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}

@@ -1,0 +1,122 @@
+.education {
+  padding-block: fluid(80, 160);
+  border-top: 1px solid var(--edge);
+}
+
+.inner {
+  @include container;
+  display: grid;
+  gap: fluid(36, 72);
+}
+
+.columns {
+  display: grid;
+  gap: fluid(40, 72);
+  @include lg { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+}
+
+.degrees {
+  display: grid;
+  border-top: 1px solid var(--edge);
+}
+
+.degree {
+  display: grid;
+  gap: 6px;
+  padding-block: 26px;
+  border-bottom: 1px solid var(--edge);
+  @include md {
+    grid-template-columns: 130px 1fr;
+    grid-template-areas: "years title" "years school";
+    column-gap: 24px;
+  }
+}
+.degreeYears {
+  @include mono(600);
+  @include md { grid-area: years; }
+  font-size: 0.85rem;
+  color: var(--station);
+  transition: color 0.8s var(--ease-out);
+}
+.degreeTitle {
+  @include display(108, 700);
+  @include md { grid-area: title; }
+  font-size: fluid(20, 28);
+  line-height: 1.15;
+  color: var(--paper);
+}
+.degreeSchool {
+  @include md { grid-area: school; }
+  color: var(--paper-3);
+  font-size: 0.95rem;
+}
+
+.side {
+  display: grid;
+  gap: fluid(36, 56);
+  align-content: start;
+}
+
+.sideTitle {
+  @include signage(118, 700);
+  color: var(--paper-3);
+  margin-bottom: 20px;
+}
+
+.langs { display: grid; gap: 22px; }
+.lang {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 16px;
+}
+.langName {
+  @include display(108, 700);
+  font-size: fluid(20, 26);
+  color: var(--paper);
+}
+.langLevel {
+  font-size: 0.85rem;
+  color: var(--paper-3);
+  align-self: end;
+  text-align: right;
+}
+.langTrack {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.langFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: var(--station);
+  transition: background-color 0.8s var(--ease-out);
+}
+.langStop {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--ink-0);
+  border: 3px solid var(--station);
+  transition: border-color 0.8s var(--ease-out);
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  li {
+    font-size: fluid(16, 19);
+    color: var(--paper-2);
+    &:not(:last-child)::after {
+      content: "·";
+      margin-inline: 0.7em;
+      color: var(--paper-3);
+    }
+  }
+}
