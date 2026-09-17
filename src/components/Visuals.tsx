@@ -89,19 +89,11 @@ function ShowroomVisual() {
   const { lang } = useLang()
   return (
     <Tilt className={styles.showroom} max={6}>
-      <img
-        src="/projects/showroom-imac.png"
-        alt={lang === 'fr' ? 'Showroom 360 : fiche véhicule sur le site d’un concessionnaire' : 'Showroom 360: vehicle page on a dealership website'}
-        className={styles.showroomImac}
-        loading="lazy"
-        decoding="async"
-      />
-      <img
-        src="/projects/showroom-header.png"
-        alt={lang === 'fr' ? 'Showroom 360 sur tablette : configuration et financement d’un véhicule' : 'Showroom 360 on tablet: vehicle build and financing'}
-        className={styles.showroomTablet}
-        loading="lazy"
-        decoding="async"
+      <BrowserFrame
+        src="/projects/showroom-tablet-screen.png"
+        alt={lang === 'fr' ? 'Showroom 360 : configuration d’un véhicule et calcul du financement' : 'Showroom 360: vehicle build and financing calculator'}
+        url="showroom 360 — build & buy"
+        ratio="345 / 262"
       />
     </Tilt>
   )

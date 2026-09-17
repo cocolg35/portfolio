@@ -19,7 +19,7 @@ function Cell({ target, delay, reduced }: CellProps) {
     const goal = CHARSET.includes(target) ? target : ' '
     if (reduced) {
       current.current = goal
-      setState((s) => ({ shown: goal, prev: s.shown, tick: s.tick + 1 }))
+      setState((s) => ({ shown: goal, prev: goal, tick: s.tick + 1 }))
       return
     }
     if (current.current === goal) return
@@ -79,10 +79,11 @@ export function SplitFlap({ phrases, length, hold = 3400, reduced = false, class
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    if (phrases.length < 2) return
+    // Reduced motion: hold the first phrase, no cycling.
+    if (reduced || phrases.length < 2) return
     const id = window.setInterval(() => setIndex((i) => (i + 1) % phrases.length), hold)
     return () => window.clearInterval(id)
-  }, [phrases.length, hold])
+  }, [phrases.length, hold, reduced])
 
   const phrase = phrases[index].toUpperCase().padEnd(cols, ' ').slice(0, cols)
 

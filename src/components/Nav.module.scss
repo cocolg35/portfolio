@@ -73,10 +73,14 @@
 }
 
 .links {
-  display: none;
+  display: flex;
   gap: 4px;
   margin-left: auto;
-  @include md { display: flex; }
+
+  a:not(:last-child) {
+    display: none;
+    @include md { display: inline-block; }
+  }
 
   a {
     @include signage(112, 600);

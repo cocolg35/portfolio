@@ -48,7 +48,6 @@ export interface Content {
     ctaJourney: string
     ctaContact: string
     scroll: string
-    since: string
   }
   journey: {
     title: string
@@ -66,8 +65,6 @@ export interface Content {
     title: string
     lede: string
     groups: SkillGroup[]
-    yearsLabel: string
-    yearsValue: string
   }
   education: {
     title: string

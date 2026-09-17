@@ -3,7 +3,7 @@
   min-height: 100svh;
   display: grid;
   align-items: center;
-  padding-block: calc(var(--nav-h) + 24px) 96px;
+  padding-block: calc(var(--nav-h) + 48px) 96px;
   overflow: hidden;
   isolation: isolate;
 
@@ -11,7 +11,7 @@
     /* soft signal glow top-right so the ink has depth */
     content: "";
     position: absolute;
-    inset: -20% -10% auto auto;
+    inset: -20% auto auto -10%;
     width: 60vw;
     height: 60vw;
     max-width: 900px;
@@ -72,28 +72,6 @@
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(20px, 3vw, 36px);
   justify-items: start;
-}
-
-.since {
-  @include signage(118, 600);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--paper-2);
-}
-
-.sinceDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--signal);
-  box-shadow: 0 0 0 4px rgba(92, 240, 162, 0.18);
-  @include motion-ok { animation: pulse 2.4s ease-in-out infinite; }
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(92, 240, 162, 0.18); }
-  50% { box-shadow: 0 0 0 9px rgba(92, 240, 162, 0.06); }
 }
 
 .name {

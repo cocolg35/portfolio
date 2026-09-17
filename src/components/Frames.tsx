@@ -33,14 +33,14 @@ export function Tilt({ children, className, max = 7 }: { children: ReactNode; cl
   )
 }
 
-export function BrowserFrame({ src, alt, url, className, eager }: { src: string; alt: string; url: string; className?: string; eager?: boolean }) {
+export function BrowserFrame({ src, alt, url, className, eager, ratio }: { src: string; alt: string; url: string; className?: string; eager?: boolean; ratio?: string }) {
   return (
     <figure className={[styles.browser, className].filter(Boolean).join(' ')}>
       <div className={styles.chrome} aria-hidden="true">
         <span className={styles.lights}><i /><i /><i /></span>
         <span className={styles.url}>{url}</span>
       </div>
-      <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+      <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" style={ratio ? { aspectRatio: ratio } : undefined} />
     </figure>
   )
 }

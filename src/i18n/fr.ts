@@ -20,7 +20,7 @@ export const fr: Content = {
     board: [
       'DÉVELOPPEUR FRONT-END SENIOR',
       'REACT · TYPESCRIPT · SCSS',
-      'DOUZE ANS D’APPLICATIONS WEB',
+      'EN SERVICE DEPUIS 2013',
       'QUÉBEC, CANADA',
     ],
     intro:
@@ -28,7 +28,6 @@ export const fr: Content = {
     ctaJourney: 'Voir le parcours',
     ctaContact: 'Me contacter',
     scroll: 'Défiler',
-    since: 'En service depuis 2013',
   },
   journey: {
     title: 'Le parcours',
@@ -164,9 +163,7 @@ export const fr: Content = {
   ],
   expertise: {
     title: 'Expertise',
-    lede: 'Un socle React et TypeScript, une obsession pour le CSS bien fait, et l’outillage d’équipes qui livrent.',
-    yearsLabel: 'années de front-end',
-    yearsValue: '12',
+    lede: 'Douze ans de front-end : un socle React et TypeScript, une obsession pour le CSS bien fait, et l’outillage d’équipes qui livrent.',
     groups: [
       {
         title: 'Architecture & langages',

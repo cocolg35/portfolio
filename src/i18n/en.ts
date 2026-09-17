@@ -20,7 +20,7 @@ export const en: Content = {
     board: [
       'SENIOR FRONT-END DEVELOPER',
       'REACT · TYPESCRIPT · SCSS',
-      'TWELVE YEARS OF WEB APPS',
+      'IN SERVICE SINCE 2013',
       'QUÉBEC CITY, CANADA',
     ],
     intro:
@@ -28,7 +28,6 @@ export const en: Content = {
     ctaJourney: 'See the journey',
     ctaContact: 'Get in touch',
     scroll: 'Scroll',
-    since: 'In service since 2013',
   },
   journey: {
     title: 'The journey',
@@ -164,9 +163,7 @@ export const en: Content = {
   ],
   expertise: {
     title: 'Expertise',
-    lede: 'A React and TypeScript core, an obsession with well-crafted CSS, and the tooling of teams that ship.',
-    yearsLabel: 'years of front-end',
-    yearsValue: '12',
+    lede: 'Twelve years of front-end: a React and TypeScript core, an obsession with well-crafted CSS, and the tooling of teams that ship.',
     groups: [
       {
         title: 'Architecture & languages',

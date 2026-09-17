@@ -90,21 +90,7 @@
 
 /* ---------- Showroom ---------- */
 .showroom {
-  position: relative;
-  padding-bottom: 20%;
-}
-.showroomImac {
-  width: 88%;
-  margin-left: auto;
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6));
-}
-.showroomTablet {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 66%;
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.7));
-  transform: translateZ(70px);
+  padding: 4% 0;
 }
 
 /* ---------- Facilité ---------- */

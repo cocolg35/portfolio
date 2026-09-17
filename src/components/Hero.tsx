@@ -24,11 +24,6 @@ export function Hero() {
       <LineMap colors={colors} reduced={reduced} />
 
       <div className={styles.inner}>
-        <motion.p className={styles.since} {...rise(0.1)}>
-          <span className={styles.sinceDot} aria-hidden="true" />
-          {t.hero.since}
-        </motion.p>
-
         <motion.h1 id="hero-name" className={styles.name} {...rise(0.2)}>
           <span>Corentin</span>
           <span>Le Gourrierec</span>
@@ -58,13 +53,15 @@ export function Hero() {
 /** The career line drawn across the hero: five stations, oldest to newest. */
 function LineMap({ colors, reduced }: { colors: string[]; reduced: boolean }) {
   // points from bottom-left (2013) to top-right (2026)
+  // routed along the right edge and above the name so no segment crosses body copy or the board
   const pts = [
-    [60, 620],
-    [300, 620],
-    [520, 420],
-    [820, 420],
-    [1040, 200],
-    [1340, 200],
+    [1440, 720],
+    [1240, 720],
+    [1060, 540],
+    [1060, 330],
+    [880, 150],
+    [600, 150],
+    [430, -20],
   ]
   const d = pts.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x} ${y}`).join(' ')
   const stations = [pts[1], pts[2], pts[3], pts[4], pts[5]]

@@ -15,11 +15,6 @@ export function Expertise() {
           <p className="lede">{t.expertise.lede}</p>
         </header>
 
-        <div className={styles.years} aria-label={`${t.expertise.yearsValue} ${t.expertise.yearsLabel}`}>
-          <span className={styles.yearsValue}>{t.expertise.yearsValue}</span>
-          <span className={styles.yearsLabel}>{t.expertise.yearsLabel}</span>
-        </div>
-
         <div className={styles.platforms}>
           {t.expertise.groups.map((g, gi) => (
             <motion.div
@@ -34,10 +29,7 @@ export function Expertise() {
                     transition: { duration: 0.8, delay: gi * 0.08, ease: [0.16, 1, 0.3, 1] as const },
                   })}
             >
-              <h3 className={styles.platformTitle}>
-                <span className={styles.platformIndex} aria-hidden="true">{String.fromCharCode(65 + gi)}</span>
-                {g.title}
-              </h3>
+              <h3 className={styles.platformTitle}>{g.title}</h3>
               <ul className={styles.skills}>
                 {g.skills.map((s) => (
                   <li key={s} className={styles.skill}>
