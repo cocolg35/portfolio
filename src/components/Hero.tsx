@@ -56,12 +56,12 @@ function LineMap({ colors, reduced }: { colors: string[]; reduced: boolean }) {
   // routed along the right edge and above the name so no segment crosses body copy or the board
   const pts = [
     [1440, 720],
-    [1240, 720],
-    [1060, 540],
-    [1060, 330],
-    [880, 150],
-    [600, 150],
-    [430, -20],
+    [1280, 720],
+    [1200, 640],
+    [1200, 330],
+    [1040, 150],
+    [720, 150],
+    [560, -20],
   ]
   const d = pts.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x} ${y}`).join(' ')
   const stations = [pts[1], pts[2], pts[3], pts[4], pts[5]]

@@ -93,7 +93,7 @@ function ShowroomVisual() {
         src="/projects/showroom-tablet-screen.png"
         alt={lang === 'fr' ? 'Showroom 360 : configuration d’un véhicule et calcul du financement' : 'Showroom 360: vehicle build and financing calculator'}
         url="showroom 360 — build & buy"
-        ratio="345 / 262"
+        ratio="288 / 228"
       />
     </Tilt>
   )
