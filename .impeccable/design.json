@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17T00:00:00Z",
+  "title": "Design System: Portfolio Corentin Le Gourrierec",
+  "extensions": {
+    "colorMeta": {
+      "signal": { "role": "primary", "displayName": "Signal vert", "canonical": "#5cf0a2", "tonalRamp": ["oklch(22% 0.06 156)", "oklch(34% 0.09 156)", "oklch(46% 0.12 156)", "oklch(58% 0.15 156)", "oklch(70% 0.17 156)", "oklch(86% 0.18 156)", "oklch(92% 0.12 156)", "oklch(96% 0.06 156)"] },
+      "signal-ink": { "role": "primary", "displayName": "Signal encre", "canonical": "#062b18", "tonalRamp": ["oklch(15% 0.04 156)", "oklch(24% 0.06 156)", "oklch(34% 0.08 156)", "oklch(46% 0.10 156)", "oklch(58% 0.12 156)", "oklch(70% 0.13 156)", "oklch(84% 0.10 156)", "oklch(95% 0.04 156)"] },
+      "station-akinox": { "role": "secondary", "displayName": "Bleu Québec (Akinox)", "canonical": "#3d86f0", "tonalRamp": ["oklch(20% 0.08 262)", "oklch(32% 0.13 262)", "oklch(44% 0.17 262)", "oklch(56% 0.19 262)", "oklch(64% 0.19 262)", "oklch(74% 0.14 262)", "oklch(86% 0.08 262)", "oklch(95% 0.03 262)"] },
+      "station-expretio": { "role": "secondary", "displayName": "Violet Appia (Expretio)", "canonical": "#7c5cff", "tonalRamp": ["oklch(20% 0.10 290)", "oklch(32% 0.16 290)", "oklch(44% 0.20 290)", "oklch(56% 0.22 290)", "oklch(62% 0.22 290)", "oklch(74% 0.16 290)", "oklch(86% 0.09 290)", "oklch(95% 0.03 290)"] },
+      "station-360agency": { "role": "secondary", "displayName": "Rouge 360 (360.Agency)", "canonical": "#ff4b5c", "tonalRamp": ["oklch(22% 0.10 18)", "oklch(34% 0.15 18)", "oklch(46% 0.19 18)", "oklch(58% 0.22 18)", "oklch(66% 0.22 18)", "oklch(76% 0.15 18)", "oklch(88% 0.08 18)", "oklch(95% 0.03 18)"] },
+      "station-facilite": { "role": "secondary", "displayName": "Ambre (Facilité Informatique)", "canonical": "#ffb340", "tonalRamp": ["oklch(24% 0.06 72)", "oklch(38% 0.10 72)", "oklch(52% 0.13 72)", "oklch(66% 0.16 72)", "oklch(80% 0.17 72)", "oklch(88% 0.12 72)", "oklch(93% 0.07 72)", "oklch(97% 0.03 72)"] },
+      "station-lorient": { "role": "secondary", "displayName": "Turquoise (Ville de Lorient)", "canonical": "#2ad4c6", "tonalRamp": ["oklch(22% 0.05 188)", "oklch(34% 0.08 188)", "oklch(46% 0.10 188)", "oklch(58% 0.12 188)", "oklch(70% 0.13 188)", "oklch(80% 0.13 188)", "oklch(89% 0.08 188)", "oklch(96% 0.03 188)"] },
+      "ink-0": { "role": "neutral", "displayName": "Encre 0 (fond)", "canonical": "#07080c", "tonalRamp": ["oklch(12% 0.01 275)", "oklch(15% 0.01 275)", "oklch(19% 0.015 275)", "oklch(24% 0.02 275)", "oklch(40% 0.02 275)", "oklch(60% 0.02 275)", "oklch(80% 0.015 275)", "oklch(95% 0.005 275)"] },
+      "ink-1": { "role": "neutral", "displayName": "Encre 1 (plateau)", "canonical": "#0c0e15", "tonalRamp": ["oklch(12% 0.01 275)", "oklch(15% 0.01 275)", "oklch(19% 0.015 275)", "oklch(24% 0.02 275)", "oklch(40% 0.02 275)", "oklch(60% 0.02 275)", "oklch(80% 0.015 275)", "oklch(95% 0.005 275)"] },
+      "ink-2": { "role": "neutral", "displayName": "Encre 2 (cadre)", "canonical": "#12151f", "tonalRamp": ["oklch(12% 0.01 275)", "oklch(15% 0.01 275)", "oklch(19% 0.015 275)", "oklch(24% 0.02 275)", "oklch(40% 0.02 275)", "oklch(60% 0.02 275)", "oklch(80% 0.015 275)", "oklch(95% 0.005 275)"] },
+      "ink-3": { "role": "neutral", "displayName": "Encre 3 (cellule)", "canonical": "#1a1e2b", "tonalRamp": ["oklch(12% 0.01 275)", "oklch(15% 0.01 275)", "oklch(19% 0.015 275)", "oklch(24% 0.02 275)", "oklch(40% 0.02 275)", "oklch(60% 0.02 275)", "oklch(80% 0.015 275)", "oklch(95% 0.005 275)"] },
+      "edge": { "role": "neutral", "displayName": "Filet (8 % blanc)", "canonical": "rgba(255, 255, 255, 0.08)", "tonalRamp": ["rgba(255,255,255,0.04)", "rgba(255,255,255,0.06)", "rgba(255,255,255,0.08)", "rgba(255,255,255,0.12)", "rgba(255,255,255,0.16)", "rgba(255,255,255,0.24)", "rgba(255,255,255,0.4)", "rgba(255,255,255,0.6)"] },
+      "edge-strong": { "role": "neutral", "displayName": "Filet fort (16 % blanc)", "canonical": "rgba(255, 255, 255, 0.16)", "tonalRamp": ["rgba(255,255,255,0.04)", "rgba(255,255,255,0.06)", "rgba(255,255,255,0.08)", "rgba(255,255,255,0.12)", "rgba(255,255,255,0.16)", "rgba(255,255,255,0.24)", "rgba(255,255,255,0.4)", "rgba(255,255,255,0.6)"] },
+      "paper": { "role": "neutral", "displayName": "Papier (titres, valeurs)", "canonical": "#eef0f5", "tonalRamp": ["oklch(20% 0.02 270)", "oklch(32% 0.03 270)", "oklch(44% 0.04 270)", "oklch(56% 0.04 270)", "oklch(64% 0.035 270)", "oklch(80% 0.025 270)", "oklch(90% 0.015 270)", "oklch(95% 0.008 270)"] },
+      "paper-2": { "role": "neutral", "displayName": "Papier 2 (texte courant)", "canonical": "#b8bfd1", "tonalRamp": ["oklch(20% 0.02 270)", "oklch(32% 0.03 270)", "oklch(44% 0.04 270)", "oklch(56% 0.04 270)", "oklch(64% 0.035 270)", "oklch(80% 0.025 270)", "oklch(90% 0.015 270)", "oklch(95% 0.008 270)"] },
+      "paper-3": { "role": "neutral", "displayName": "Papier 3 (labels, légendes)", "canonical": "#8089a1", "tonalRamp": ["oklch(20% 0.02 270)", "oklch(32% 0.03 270)", "oklch(44% 0.04 270)", "oklch(56% 0.04 270)", "oklch(64% 0.035 270)", "oklch(80% 0.025 270)", "oklch(90% 0.015 270)", "oklch(95% 0.008 270)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Nom du hero, noms d'entreprise, titre du contact. Archivo étiré 104–122, graisse 850, capitales, interligne 0.88–0.9." },
+      "headline": { "displayName": "Headline", "purpose": "Titres de section (.section-title). Archivo wdth 118 / 800, capitales." },
+      "tagline": { "displayName": "Tagline", "purpose": "Phrase d'accroche de station et compétences. Archivo wdth 108 / 700, interligne 1.1." },
+      "title": { "displayName": "Title", "purpose": "Intitulés de diplômes et noms de langues. Archivo wdth 108 / 700." },
+      "lede": { "displayName": "Lede", "purpose": "Introductions de hero et de section, 54–62ch, paper-2, text-wrap: pretty." },
+      "body": { "displayName": "Body", "purpose": "Narrations de station, puces, texte courant. Archivo wdth 100 / 400, paper-2." },
+      "label": { "displayName": "Signalétique", "purpose": "Boutons, liens de nav, labels de stack et de contact, marqueur « vous êtes ici », onglets. Mixin signage()." },
+      "mono": { "displayName": "Mono", "purpose": "Dates, URL, stack, bascule FR/EN, cellules du tableau à volets, notes de sources. Martian Mono, tabular-nums. Mixin mono()." }
+    },
+    "shadows": [
+      { "name": "screen-frame", "value": "0 30px 60px -20px rgba(0, 0, 0, 0.7), 0 12px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)", "purpose": "Cadres d'écran (navigateur, éditeur, tuiles). Seule ombre autorisée sous un cadre." },
+      { "name": "phone", "value": "0 40px 70px -30px rgba(0, 0, 0, 0.85), inset 0 0 0 2px rgba(255, 255, 255, 0.04)", "purpose": "Corps de téléphone (PhoneFrame, mock de signalement)." },
+      { "name": "board", "value": "inset 0 2px 8px rgba(0, 0, 0, 0.6), 0 20px 40px -24px rgba(0, 0, 0, 0.8)", "purpose": "Plateau du tableau à volets, enfoncé dans l'encre." },
+      { "name": "stop-halo", "value": "0 0 0 6px rgba(var(--station-rgb), 0.18)", "purpose": "Anneau plat de l'arrêt actif du rail ; même recette en signal sur le terminus." },
+      { "name": "marker-glow", "value": "0 0 0 3px var(--ink-0), 0 0 22px rgba(255, 255, 255, 0.8)", "purpose": "Point de marque « vous êtes ici » et train du plan SVG." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Courbe par défaut de toute transition et entrée." },
+      { "name": "ease-flap", "value": "cubic-bezier(0.4, 0, 0.7, 0.2)", "purpose": "Chute d'un volet du tableau (0.1s), réservé au split-flap." },
+      { "name": "reveal", "value": "opacity 0→1, y 30px→0, filter blur(8px)→0, 0.9s ease-out, once, viewport margin -10%", "purpose": "Entrée des stations et blocs de section (Framer Motion whileInView)." },
+      { "name": "hero-reveal", "value": "opacity 0→1, y 24px→0, filter blur(10px)→0, ease-out, cascade", "purpose": "Entrée du hero au chargement." },
+      { "name": "rail-fill", "value": "useScroll offset ['start 55%', 'end 55%'] → useSpring stiffness 90, damping 26, mass 0.5 → scaleY", "purpose": "Le seul moment mis en scène : remplissage du rail piloté par le scroll." },
+      { "name": "station-colour", "value": "IntersectionObserver rootMargin -45% 0 -45% 0 → --station / --station-rgb sur :root ; transitions 0.5–1.2s ease-out", "purpose": "Couleur de page suivant la station visible." },
+      { "name": "tilt", "value": "perspective 1400px, rotate ±7°, useSpring stiffness 120, damping 18, mass 0.6", "purpose": "Cadres d'écran suivant le pointeur souris ; inerte au toucher et en reduced motion." },
+      { "name": "hover-lift", "value": "transform translateY(-2px), 0.25s ease-out", "purpose": "Boutons au survol (pointer fine uniquement)." },
+      { "name": "row-shift", "value": "transform translateX(8px), 0.35s ease-out", "purpose": "Rangée de contact au survol." },
+      { "name": "lenis", "value": "lerp 0.11, wheelMultiplier 0.95, anchor offset -24px", "purpose": "Défilement inertiel, désactivé sous reduced motion / ?static." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce OU URLSearchParams has('static')", "purpose": "Désactive Lenis, entrées, tilt, boucles ; rail rempli à 100 %, tableau figé, plan SVG tracé d'emblée." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "560px" },
+      { "name": "md", "value": "820px" },
+      { "name": "lg", "value": "1080px" },
+      { "name": "xl", "value": "1400px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton principal",
+      "kind": "button",
+      "refersTo": "btn-primary",
+      "description": "Action unique en signal vert ; « Voir le parcours », « M'écrire ».",
+      "html": "<a class=\"ds-btn ds-btn--primary\" href=\"#parcours\">Voir le parcours <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.75em; padding: 1.05em 1.5em; border-radius: 999px; border: 1px solid var(--edge-strong, rgba(255,255,255,0.16)); color: var(--paper, #eef0f5); font-family: var(--font-display, Archivo, sans-serif); font-variation-settings: 'wdth' 118, 'wght' 700; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; line-height: 1; text-decoration: none; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), border-color 0.25s cubic-bezier(0.16,1,0.3,1), transform 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s; } .ds-btn svg { width: 1.1em; height: 1.1em; } .ds-btn--primary { background: var(--signal, #5cf0a2); border-color: var(--signal, #5cf0a2); color: var(--signal-ink, #062b18); } .ds-btn--primary:hover { background: #7cf5b6; border-color: #7cf5b6; transform: translateY(-2px); } .ds-btn:focus-visible { outline: 2px solid var(--signal, #5cf0a2); outline-offset: 4px; }"
+    },
+    {
+      "name": "Bouton fantôme",
+      "kind": "button",
+      "refersTo": "btn-ghost",
+      "description": "Action secondaire : pilule vide bordée edge-strong, bordure papier au survol.",
+      "html": "<a class=\"ds-btn ds-btn--ghost\" href=\"#contact\">Me contacter</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.75em; padding: 1.05em 1.5em; border-radius: 999px; border: 1px solid var(--edge-strong, rgba(255,255,255,0.16)); color: var(--paper, #eef0f5); font-family: var(--font-display, Archivo, sans-serif); font-variation-settings: 'wdth' 118, 'wght' 700; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; line-height: 1; text-decoration: none; background: transparent; transition: border-color 0.25s cubic-bezier(0.16,1,0.3,1), transform 0.25s cubic-bezier(0.16,1,0.3,1); } .ds-btn--ghost:hover { border-color: var(--paper, #eef0f5); transform: translateY(-2px); } .ds-btn:focus-visible { outline: 2px solid var(--signal, #5cf0a2); outline-offset: 4px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Barre fixe 64 px : point de marque, prénom en signalétique, liens pilules, bascule FR/EN mono, barre de progression en couleur de station.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__brand\" href=\"#top\"><span class=\"ds-nav__dot\"></span><span class=\"ds-nav__text\">Corentin <em>Le Gourrierec</em></span></a><div class=\"ds-nav__links\"><a href=\"#parcours\">Parcours</a><a href=\"#expertise\">Expertise</a><a href=\"#formation\">Formation</a><a href=\"#contact\">Contact</a></div><button class=\"ds-nav__lang\" type=\"button\"><span data-active>FR</span><span class=\"ds-nav__sep\">/</span><span>EN</span></button><span class=\"ds-nav__progress\"></span></nav>",
+      "css": ".ds-nav { position: relative; display: flex; align-items: center; gap: 24px; height: 64px; padding-inline: 24px; color: var(--paper, #eef0f5); background: linear-gradient(to bottom, rgba(7,8,12,0.92), rgba(7,8,12,0.7) 70%, rgba(7,8,12,0)); font-family: var(--font-display, Archivo, sans-serif); } .ds-nav__brand { display: inline-flex; align-items: center; gap: 12px; flex: 1 1 auto; text-decoration: none; color: inherit; } .ds-nav__dot { width: 12px; height: 12px; border-radius: 50%; border: 3px solid var(--station, #5cf0a2); box-shadow: 0 0 0 2px var(--ink-0, #07080c); } .ds-nav__text { font-variation-settings: 'wdth' 115, 'wght' 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; display: flex; gap: 0.6em; } .ds-nav__text em { font-style: normal; color: var(--paper-3, #8089a1); font-variation-settings: 'wdth' 115, 'wght' 500; } .ds-nav__links { display: flex; gap: 4px; margin-left: auto; } .ds-nav__links a { font-variation-settings: 'wdth' 112, 'wght' 600; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; line-height: 1; padding: 0.9em 1em; color: var(--paper-2, #b8bfd1); border-radius: 999px; text-decoration: none; transition: color 0.2s, background-color 0.2s; } .ds-nav__links a:hover { color: var(--paper, #eef0f5); background: rgba(255,255,255,0.06); } .ds-nav__links a:focus-visible, .ds-nav__brand:focus-visible, .ds-nav__lang:focus-visible { outline: 2px solid var(--signal, #5cf0a2); outline-offset: 4px; border-radius: 4px; } .ds-nav__lang { font-family: var(--font-mono, 'Martian Mono', monospace); font-weight: 600; font-variant-numeric: tabular-nums; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 0.35em; padding: 0.6em 0.9em; border: 1px solid var(--edge-strong, rgba(255,255,255,0.16)); border-radius: 999px; color: var(--paper-3, #8089a1); background: none; cursor: pointer; transition: border-color 0.2s; } .ds-nav__lang:hover { border-color: var(--paper, #eef0f5); } .ds-nav__lang span[data-active] { color: var(--paper, #eef0f5); } .ds-nav__sep { opacity: 0.5; } .ds-nav__progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--station, #5cf0a2); transform-origin: left; transform: scaleX(0.4); }"
+    },
+    {
+      "name": "Chips de stack",
+      "kind": "chip",
+      "refersTo": "chip-stack",
+      "description": "Technologies d'une station en Martian Mono, teintées par la couleur de station (--s).",
+      "html": "<ul class=\"ds-stack\" style=\"--s-rgb: 61, 134, 240\"><li>React</li><li>TypeScript</li><li>SCSS</li><li>WCAG 2.1</li></ul>",
+      "css": ".ds-stack { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; } .ds-stack li { font-family: var(--font-mono, 'Martian Mono', monospace); font-weight: 500; font-variant-numeric: tabular-nums; font-size: 0.74rem; padding: 0.55em 0.9em; border-radius: 6px; border: 1px solid rgba(var(--s-rgb, 92, 240, 162), 0.35); color: var(--paper, #eef0f5); background: rgba(var(--s-rgb, 92, 240, 162), 0.08); }"
+    },
+    {
+      "name": "Onglets de deck",
+      "kind": "chip",
+      "refersTo": "chip-tab",
+      "description": "Sélecteur des écrans du deck Appia : pilules signalétique, index mono en couleur de station, sélection teintée.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" style=\"--station: #7c5cff; --station-rgb: 124, 92, 255\"><button class=\"ds-tab\" role=\"tab\" aria-selected=\"true\"><span class=\"ds-tab__i\">01</span>Tableau de bord</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\"><span class=\"ds-tab__i\">02</span>Prévisions</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\"><span class=\"ds-tab__i\">03</span>Tarification</button></div>",
+      "css": ".ds-tabs { display: flex; flex-wrap: wrap; gap: 6px; } .ds-tab { display: inline-flex; align-items: center; gap: 0.7em; padding: 0.9em 1.1em; border-radius: 999px; border: 1px solid var(--edge, rgba(255,255,255,0.08)); background: none; cursor: pointer; color: var(--paper-3, #8089a1); font-family: var(--font-display, Archivo, sans-serif); font-variation-settings: 'wdth' 112, 'wght' 600; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; line-height: 1; transition: color 0.2s, border-color 0.2s, background-color 0.2s; } .ds-tab:hover { color: var(--paper, #eef0f5); border-color: var(--edge-strong, rgba(255,255,255,0.16)); } .ds-tab[aria-selected=\"true\"] { color: var(--paper, #eef0f5); border-color: var(--station, #5cf0a2); background: rgba(var(--station-rgb, 92, 240, 162), 0.12); } .ds-tab:focus-visible { outline: 2px solid var(--signal, #5cf0a2); outline-offset: 4px; } .ds-tab__i { font-family: var(--font-mono, 'Martian Mono', monospace); font-weight: 600; font-size: 0.7em; color: var(--station, #5cf0a2); }"
+    },
+    {
+      "name": "Rangée à filets",
+      "kind": "card",
+      "refersTo": "hairline-row",
+      "description": "Le conteneur de contenu du système à la place des cartes : label signalétique, valeur, filets 1 px edge, décalage au survol.",
+      "html": "<div class=\"ds-rows\"><a class=\"ds-row\" href=\"mailto:contact@example.com\"><span class=\"ds-row__icon\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M3 7l9 6 9-6\"/></svg></span><span class=\"ds-row__label\">Courriel</span><span class=\"ds-row__value\">contact@example.com</span></a><a class=\"ds-row\" href=\"#\"><span class=\"ds-row__icon\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z\"/><rect x=\"2\" y=\"9\" width=\"4\" height=\"12\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/></svg></span><span class=\"ds-row__label\">LinkedIn</span><span class=\"ds-row__value\">/in/corentinlegourrierec</span></a></div>",
+      "css": ".ds-rows { width: 100%; max-width: 720px; display: grid; border-top: 1px solid var(--edge, rgba(255,255,255,0.08)); font-family: var(--font-display, Archivo, sans-serif); } .ds-row { display: grid; grid-template-columns: 28px 140px 1fr; align-items: center; column-gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--edge, rgba(255,255,255,0.08)); color: var(--paper, #eef0f5); text-decoration: none; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-row:hover { transform: translateX(8px); } .ds-row:hover .ds-row__value { color: var(--signal, #5cf0a2); } .ds-row:focus-visible { outline: 2px solid var(--signal, #5cf0a2); outline-offset: 4px; border-radius: 4px; } .ds-row__icon { display: grid; place-items: center; color: var(--paper-3, #8089a1); } .ds-row__label { font-variation-settings: 'wdth' 118, 'wght' 700; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; line-height: 1; color: var(--paper-3, #8089a1); } .ds-row__value { font-size: 1.2rem; font-variation-settings: 'wdth' 100, 'wght' 600; transition: color 0.25s; }"
+    },
+    {
+      "name": "Cadre navigateur",
+      "kind": "custom",
+      "refersTo": "screen-frame",
+      "description": "Seul conteneur ombré du système : chrome ink-3, voyants, URL mono sur pilule ink-1, ombre de cadre.",
+      "html": "<figure class=\"ds-browser\"><div class=\"ds-browser__chrome\"><span class=\"ds-browser__lights\"><i></i><i></i><i></i></span><span class=\"ds-browser__url\">gap.soinsvirtuels.gouv.qc.ca</span></div><div class=\"ds-browser__screen\"></div></figure>",
+      "css": ".ds-browser { margin: 0; background: var(--ink-2, #12151f); border: 1px solid var(--edge, rgba(255,255,255,0.08)); border-radius: 14px; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.7), 0 12px 24px -12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05); overflow: hidden; } .ds-browser__chrome { display: flex; align-items: center; gap: 12px; height: 34px; padding-inline: 12px; background: var(--ink-3, #1a1e2b); border-bottom: 1px solid var(--edge, rgba(255,255,255,0.08)); } .ds-browser__lights { display: inline-flex; gap: 6px; } .ds-browser__lights i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.18); } .ds-browser__url { flex: 1; font-family: var(--font-mono, 'Martian Mono', monospace); font-weight: 500; font-size: 0.66rem; color: var(--paper-3, #8089a1); padding: 0.35em 0.8em; background: var(--ink-1, #0c0e15); border-radius: 999px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .ds-browser__screen { aspect-ratio: 16 / 10; background: linear-gradient(135deg, #f4f6fb, #dfe4ee); }"
+    },
+    {
+      "name": "Tableau à volets",
+      "kind": "custom",
+      "refersTo": "split-flap-board",
+      "description": "Tableau de départs du hero : plateau ink-1 enfoncé, cellules mono ink-3 à fente centrale, moitiés en dégradé d'encre.",
+      "html": "<div class=\"ds-board\"><span class=\"ds-cell\"><b>F</b><s></s></span><span class=\"ds-cell\"><b>R</b><s></s></span><span class=\"ds-cell\"><b>O</b><s></s></span><span class=\"ds-cell\"><b>N</b><s></s></span><span class=\"ds-cell\"><b>T</b><s></s></span><span class=\"ds-cell ds-cell--blank\"><b> </b><s></s></span><span class=\"ds-cell\"><b>E</b><s></s></span><span class=\"ds-cell\"><b>N</b><s></s></span><span class=\"ds-cell\"><b>D</b><s></s></span></div>",
+      "css": ".ds-board { --cell-w: 1.4rem; --cell-h: calc(var(--cell-w) * 1.55); display: flex; gap: 4px; width: max-content; padding: 0.55em; background: var(--ink-1, #0c0e15); border: 1px solid var(--edge, rgba(255,255,255,0.08)); border-radius: 8px; box-shadow: inset 0 2px 8px rgba(0,0,0,0.6), 0 20px 40px -24px rgba(0,0,0,0.8); } .ds-cell { position: relative; width: var(--cell-w); height: var(--cell-h); font-family: var(--font-mono, 'Martian Mono', monospace); font-weight: 600; font-size: calc(var(--cell-w) * 1.05); color: var(--paper, #eef0f5); text-align: center; border-radius: 3px; background: linear-gradient(to bottom, #272c3d 0%, #1d2130 50%, #181c29 50%, #12151f 100%); overflow: hidden; } .ds-cell b { position: absolute; inset: 0; line-height: var(--cell-h); font-weight: inherit; } .ds-cell s { position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(0,0,0,0.8); } .ds-cell--blank { color: transparent; }"
+    },
+    {
+      "name": "Rail et en-tête de station",
+      "kind": "custom",
+      "refersTo": "hairline-row",
+      "description": "Rail 4 px (fantôme + remplissage signal→station), arrêt évidé en couleur de station, marqueur « vous êtes ici », en-tête années / entreprise / rôle.",
+      "html": "<div class=\"ds-track\" style=\"--s: #3d86f0; --s-rgb: 61, 134, 240; --station: #3d86f0; --station-rgb: 61, 134, 240\"><div class=\"ds-rail\"><span class=\"ds-rail__ghost\"></span><span class=\"ds-rail__fill\"></span><span class=\"ds-rail__stop\" data-active></span><span class=\"ds-rail__marker\"></span></div><header class=\"ds-station\"><p class=\"ds-station__years\"><span>2023</span><span class=\"ds-station__sep\"></span><span>Aujourd'hui</span></p><h3 class=\"ds-station__company\">Akinox</h3><p class=\"ds-station__role\">Développeur Web Front-End Senior<span class=\"ds-station__dot\">·</span>Québec, QC</p></header></div>",
+      "css": ".ds-track { display: grid; grid-template-columns: 72px 1fr; gap: 32px; min-height: 220px; font-family: var(--font-display, Archivo, sans-serif); } .ds-rail { position: relative; } .ds-rail__ghost, .ds-rail__fill { position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; translate: -50% 0; border-radius: 999px; } .ds-rail__ghost { background: rgba(255,255,255,0.07); } .ds-rail__fill { background: linear-gradient(to bottom, var(--signal, #5cf0a2), var(--station) 60%, var(--station)); transform-origin: top; transform: scaleY(0.6); } .ds-rail__stop { position: absolute; left: 50%; top: 22%; width: 20px; height: 20px; translate: -50% -50%; border-radius: 50%; background: var(--ink-0, #07080c); border: 5px solid var(--s); } .ds-rail__stop[data-active] { transform: scale(1.35); box-shadow: 0 0 0 6px rgba(var(--station-rgb), 0.18); } .ds-rail__marker { position: absolute; left: 50%; top: 60%; width: 12px; height: 12px; translate: -50% -50%; border-radius: 50%; background: var(--paper, #eef0f5); box-shadow: 0 0 0 3px var(--ink-0, #07080c), 0 0 22px rgba(255,255,255,0.8); } .ds-station { display: grid; gap: 10px; } .ds-station__years { margin: 0; display: inline-flex; align-items: center; gap: 14px; font-family: var(--font-mono, 'Martian Mono', monospace); font-weight: 600; font-variant-numeric: tabular-nums; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--s); } .ds-station__sep { width: 36px; height: 2px; background: currentColor; opacity: 0.6; } .ds-station__company { margin: 0; font-variation-settings: 'wdth' 122, 'wght' 850; letter-spacing: -0.03em; font-size: 5rem; line-height: 0.9; text-transform: uppercase; color: var(--paper, #eef0f5); } .ds-station__role { margin: 0; font-size: 1.2rem; color: var(--paper-2, #b8bfd1); font-variation-settings: 'wdth' 100, 'wght' 500; } .ds-station__dot { margin-inline: 0.6em; color: var(--paper-3, #8089a1); }"
+    },
+    {
+      "name": "Tag de légende",
+      "kind": "chip",
+      "refersTo": "chip-stack",
+      "description": "Distingue une interface réelle (teinte station) d'une illustration (pointillé edge-strong) sous chaque visuel.",
+      "html": "<p class=\"ds-caption\" style=\"--s-rgb: 61, 134, 240\"><span class=\"ds-caption__tag\" data-kind=\"real\">Interface réelle</span><span>gap.soinsvirtuels.gouv.qc.ca — Gouvernement du Québec</span></p><p class=\"ds-caption\"><span class=\"ds-caption__tag\" data-kind=\"illustration\">Illustration</span><span>Reconstitution, aucun visuel public</span></p>",
+      "css": ".ds-caption { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 0 0 10px; font-family: var(--font-display, Archivo, sans-serif); font-size: 0.78rem; color: var(--paper-3, #8089a1); } .ds-caption__tag { font-variation-settings: 'wdth' 118, 'wght' 700; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1; font-size: 0.6rem; padding: 0.55em 0.8em; border-radius: 4px; } .ds-caption__tag[data-kind=\"real\"] { background: rgba(var(--s-rgb, 92, 240, 162), 0.16); color: var(--paper, #eef0f5); } .ds-caption__tag[data-kind=\"illustration\"] { border: 1px dashed var(--edge-strong, rgba(255,255,255,0.16)); color: var(--paper-2, #b8bfd1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le plan de ligne",
+    "overview": "Le site est un plan de transport lu de haut en bas : cinq stations (Akinox, Expretio, 360.Agency, Facilité Informatique, Ville de Lorient), un rail vertical qui se remplit au scroll, un marqueur « vous êtes ici » épinglé à 55 % de la hauteur d'écran. Tout ce qui est écrit a la voix d'une signalétique de quai : Archivo étiré et en capitales pour les panneaux, Martian Mono pour les tableaux de départ et les données, texte courant en Archivo à chasse normale. Le fond est une encre profonde (ink-0) qui ne lit jamais comme du noir plat grâce à un grain SVG fixe à 35 % d'opacité et à deux halos radiaux teintés par la station active.\n\nLa couleur structure la lecture. Le vert signal est réservé à l'utilisateur (« vous êtes ici », action principale, sélection, focus, terminus). Chaque station impose sa couleur de ligne à toute la page via --station / --station-rgb posés sur :root par un IntersectionObserver ; barre de progression de la nav, point de marque, remplissage du rail, halos, onglets sélectionnés, années de formation et niveaux de langue suivent tous cette variable. Un seul moment d'animation est réellement mis en scène : le rail et la couleur qui avancent avec le scroll. Le reste est de l'entrée (flou vers net) ou de la réponse à un geste.\n\nLa densité est éditoriale : sections espacées de 80 à 200 px, stations séparées de 96 à 200 px, listes en rangées séparées par des filets à 8 % de blanc. Aucune carte : les contenus sont posés directement sur l'encre, et seuls les écrans de produits (navigateur, téléphone, éditeur, tuiles) reçoivent un cadre et une ombre.",
+    "keyCharacteristics": [
+      "Encre profonde à quatre paliers, texte en trois teintes de papier, un seul vert signal.",
+      "Couleur de ligne par station, propagée à toute la page par --station / --station-rgb.",
+      "Archivo variable : largeur 104–122 pour l'affichage et la signalétique, 100 pour le texte courant.",
+      "Martian Mono en chiffres tabulaires pour dates, URL, cellules du tableau à volets, puces de stack.",
+      "Rangées à filets et pilules, jamais de cartes ; cadres d'écran réservés aux visuels produits.",
+      "Motion : un moment scroll-driven, entrées flou-vers-net, tout inerte sous prefers-reduced-motion ou ?static."
+    ],
+    "rules": [
+      { "name": "La règle du signal unique", "body": "Le vert signal désigne l'utilisateur et son action ; il ne colore ni titre, ni texte, ni décoration de station. Sur un écran, on le voit sur l'action principale, le focus, le point de marque et rien d'autre.", "section": "colors" },
+      { "name": "La règle de la ligne vivante", "body": "Une couleur de station n'est jamais écrite en dur dans un composant : elle passe par --station (page) ou --s (station courante), et toute teinte de fond dérivée se fait en rgba(var(--station-rgb), α) avec α ≤ 0.18.", "section": "colors" },
+      { "name": "La règle des trois papiers", "body": "Le texte n'a que trois valeurs : paper pour ce qui se lit en premier, paper-2 pour ce qui se lit, paper-3 pour ce qui se repère. Aucun gris intermédiaire.", "section": "colors" },
+      { "name": "La règle de la chasse", "body": "La largeur Archivo dit le rôle : ≥ 104 et capitales pour ce qui s'affiche, 100 pour ce qui se lit. Un texte courant n'est jamais étiré, un titre n'est jamais à chasse 100.", "section": "typography" },
+      { "name": "La règle du tableau de départ", "body": "Toute donnée (date, URL, version, stack, chiffre de tableau) est en Martian Mono à chiffres tabulaires ; toute prose est en Archivo. Les deux ne se mélangent pas dans une même ligne, sauf le séparateur.", "section": "typography" },
+      { "name": "La règle de la ligne entière", "body": "Un nom d'entreprise ne se coupe jamais dans un mot : la taille se réduit avant la césure (overflow-wrap: normal + plafond calculé).", "section": "typography" },
+      { "name": "La règle de l'objet", "body": "Une ombre portée n'est posée que sous une chose qui existerait physiquement (écran, tableau, appareil). Un bloc de texte, une rangée, un chip ne portent jamais d'ombre.", "section": "elevation" },
+      { "name": "La règle du halo plat", "body": "L'emphase d'un point ou d'un arrêt se fait par un anneau 0 0 0 N px en alpha de la couleur active, jamais par un flou.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do poser tout contenu directement sur ink-0 et le structurer par des filets 1 px edge ; un nouveau bloc de contenu est une rangée, pas une boîte.",
+      "Do dériver toute teinte de station de --station / --station-rgb (ou --s / --s-rgb dans une station) avec un alpha ≤ 0.18 pour les fonds et ≤ 0.35 pour les bordures.",
+      "Do utiliser Archivo étiré (wdth ≥ 104, wght ≥ 700) et les capitales pour tout ce qui est titre ou signalétique, et Archivo wdth 100 / 400 pour tout ce qui se lit.",
+      "Do mettre les données (dates, URL, versions, stack, cellules) en Martian Mono à chiffres tabulaires.",
+      "Do dimensionner le rythme vertical avec fluid(min, max) entre 360 et 1440 px et le rythme horizontal avec --gutter et le conteneur 1360 px.",
+      "Do appliquer focus-ring (2 px signal, décalage 4 px) à tout interactif et restreindre les survols à (hover: hover) and (pointer: fine).",
+      "Do faire entrer un élément par flou-vers-net (blur(8px) → 0, 0.9s, ease-out), une seule fois, et rendre ce mouvement inerte sous reduced motion / ?static.",
+      "Do distinguer une reconstitution d'une vraie interface par le tag « illustration » en pointillé et créditer l'éditeur en légende."
+    ],
+    "donts": [
+      "Don't créer de cartes : pas de bloc de texte avec fond ink-1/ink-2, bordure et ombre. Les cadres d'écran sont réservés aux visuels produits.",
+      "Don't ajouter de kicker ou d'eyebrow au-dessus d'un titre ; les titres de section se tiennent seuls avec leur lede.",
+      "Don't numéroter les sections ni les stations ; la position est dite par le rail et le marqueur, pas par un chiffre.",
+      "Don't appliquer de dégradé à du texte (background-clip: text). Les dégradés du monde sont réservés au rail, aux volets, au voile de nav et aux halos.",
+      "Don't utiliser backdrop-filter ni aucun effet verre ; le voile de nav est un dégradé opaque.",
+      "Don't porter d'ombre sous un texte, une rangée ou un chip ; les ombres appartiennent aux écrans, au plateau et au téléphone.",
+      "Don't écrire une couleur de station en dur dans un composant ni utiliser signal pour un titre, un texte ou une décoration de station.",
+      "Don't laisser un nom d'entreprise se couper dans un mot ; réduire la taille avant la césure.",
+      "Don't introduire un quatrième gris de texte ou une graisse Archivo entre 400 et 700 pour le texte courant (500 est réservé à rôle · ville et aux valeurs de contact)."
+    ]
+  }
+}
