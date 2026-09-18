@@ -62,13 +62,18 @@
   @include signage(115, 700);
   letter-spacing: 0.1em;
   display: flex;
-  gap: 0.6em;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.62rem;
+  @include sm {
+    flex-direction: row;
+    gap: 0.6em;
+    font-size: 0.72rem;
+  }
   em {
-    display: none;
     font-style: normal;
     color: var(--paper-3);
     font-variation-settings: "wdth" 115, "wght" 500;
-    @include sm { display: inline; }
   }
 }
 
