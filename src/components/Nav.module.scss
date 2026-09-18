@@ -64,11 +64,14 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
   @include sm {
     flex-direction: row;
     gap: 0.6em;
     font-size: 0.72rem;
+    letter-spacing: 0.1em;
   }
   em {
     font-style: normal;
