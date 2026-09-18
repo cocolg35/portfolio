@@ -7,6 +7,37 @@ export interface Figure {
   label: string
 }
 
+export type FrameKind = 'browser' | 'phone' | 'tablet' | 'photo' | 'plain'
+
+export interface TourVisual {
+  frame: FrameKind
+  src: string
+  alt: string
+  url?: string
+  /** Rendered smaller (e.g. a low-resolution capture). */
+  small?: boolean
+}
+
+export type TourKind = 'real' | 'mockup'
+
+export interface TourItem {
+  id: string
+  label: string
+  year?: string
+  title: string
+  text: string
+  bullets?: string[]
+  visuals: TourVisual[]
+  kind: TourKind
+  credit: string
+}
+
+export interface Tour {
+  title: string
+  lede: string
+  items: TourItem[]
+}
+
 export interface Station {
   id: string
   company: string
@@ -24,6 +55,7 @@ export interface Station {
   figuresNote?: string
   visual: VisualKind
   visualCredit: string
+  tour?: Tour
 }
 
 export interface SkillGroup {
@@ -57,6 +89,8 @@ export interface Content {
     stackLabel: string
     illustrationLabel: string
     screenshotLabel: string
+    mockupLabel: string
+    tourAria: string
     sourceLabel: string
     yourHere: string
   }

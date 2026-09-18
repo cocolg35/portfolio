@@ -4,6 +4,7 @@ import { useLang } from '../i18n/LangContext'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import type { Station as StationT } from '../i18n/types'
 import { StationVisual } from './Visuals'
+import { ProjectTour } from './ProjectTour'
 import styles from './Journey.module.scss'
 
 export function Journey() {
@@ -93,7 +94,7 @@ export function Journey() {
 
 function Station({ station: s, index, isActive, reduced }: { station: StationT; index: number; isActive: boolean; reduced: boolean }) {
   const { t } = useLang()
-  const isIllustration = s.visual === 'facilite' || s.visual === 'lorient'
+  const isIllustration = s.visual === 'facilite'
   const reveal = reduced
     ? {}
     : {
@@ -177,6 +178,15 @@ function Station({ station: s, index, isActive, reduced }: { station: StationT; 
           </figcaption>
         </motion.figure>
       </div>
+
+      {s.tour && (
+        <motion.div
+          className={styles.tourWrap}
+          {...(reduced ? {} : { ...reveal, transition: { ...reveal.transition, delay: 0.05 } })}
+        >
+          <ProjectTour tour={s.tour} stationColor={s.color} />
+        </motion.div>
+      )}
     </article>
   )
 }

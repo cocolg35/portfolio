@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import type { VisualKind } from '../i18n/types'
 import { useLang } from '../i18n/LangContext'
-import { BrowserFrame, PhoneFrame, Tilt } from './Frames'
-import { Camera, Clock, Map, Museum, Pin, Ticket, Bus } from './Icons'
+import { BrowserFrame, PhoneFrame, PhotoFrame, Tilt } from './Frames'
 import styles from './Visuals.module.scss'
 
 export function StationVisual({ kind }: { kind: VisualKind }) {
@@ -148,40 +147,18 @@ function FaciliteVisual() {
 function LorientVisual() {
   const { lang } = useLang()
   const fr = lang === 'fr'
-  const tiles = [
-    { icon: <Museum />, label: fr ? 'Visite' : 'Tour', wide: true },
-    { icon: <Ticket />, label: fr ? 'Billets' : 'Tickets' },
-    { icon: <Clock />, label: fr ? 'Horaires' : 'Hours' },
-    { icon: <Map />, label: fr ? 'Plan' : 'Map', wide: true },
-    { icon: <Bus />, label: fr ? 'Accès' : 'Access' },
-    { icon: <Camera />, label: fr ? 'Galerie' : 'Gallery' },
-  ]
   return (
-    <div className={styles.lorient} role="img" aria-label={fr ? 'Illustration : application Windows 8.1 pour un musée et application mobile de signalement' : 'Illustration: Windows 8.1 museum app and incident reporting mobile app'}>
-      <Tilt className={styles.tilesScene} max={5}>
-        <div className={styles.tiles} aria-hidden="true">
-          <div className={styles.tilesHead}>{fr ? 'Pôle muséal' : 'Museum hub'}</div>
-          {tiles.map((tile, i) => (
-            <div key={i} className={styles.tile} data-wide={tile.wide || undefined} style={{ ['--i' as string]: i }}>
-              {tile.icon}
-              <span>{tile.label}</span>
-            </div>
-          ))}
-        </div>
-      </Tilt>
-      <div className={styles.report} aria-hidden="true">
-        <div className={styles.reportBar} />
-        <div className={styles.reportMap}>
-          <Pin />
-        </div>
-        <div className={styles.reportForm}>
-          <span className={styles.reportTitle}>{fr ? 'Signaler' : 'Report'}</span>
-          <span className={styles.reportField} style={{ width: '82%' }} />
-          <span className={styles.reportField} style={{ width: '58%' }} />
-          <span className={styles.reportPhoto}><Camera /></span>
-          <span className={styles.reportSend}>{fr ? 'Envoyer' : 'Send'}</span>
-        </div>
-      </div>
-    </div>
+    <Tilt className={styles.lorient} max={6}>
+      <PhotoFrame
+        src="/projects/lorient/musee-borne.jpg"
+        alt={fr ? 'Borne tactile du musée de la Compagnie des Indes avec l’application en cours d’utilisation' : 'Touch kiosk at the Musée de la Compagnie des Indes running the application'}
+        className={styles.lorientPhoto}
+      />
+      <PhoneFrame
+        src="/projects/lorient/siv-signalement.jpg"
+        alt={fr ? 'Application SIV Lorient : formulaire de signalement Propreté et espaces verts' : 'SIV Lorient app: cleanliness and green spaces reporting form'}
+        className={styles.lorientPhone}
+      />
+    </Tilt>
   )
 }

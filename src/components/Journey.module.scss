@@ -308,3 +308,9 @@
   &[data-kind="real"] { background: rgba(var(--s-rgb), 0.16); color: var(--paper); }
   &[data-kind="illustration"] { border: 1px dashed var(--edge-strong); color: var(--paper-2); }
 }
+
+.tourWrap {
+  min-width: 0;
+  --station: var(--s);
+  --station-rgb: var(--s-rgb);
+}

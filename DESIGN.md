@@ -324,3 +324,15 @@ Mixin `screen-frame` : fond `ink-2`, bordure `edge`, rayon 14 px, ombre de cadre
 - **Don't** écrire une couleur de station en dur dans un composant ni utiliser `signal` pour un titre, un texte ou une décoration de station.
 - **Don't** laisser un nom d'entreprise se couper dans un mot ; réduire la taille avant la césure.
 - **Don't** introduire un quatrième gris de texte ou une graisse Archivo entre 400 et 700 pour le texte courant (500 est réservé à rôle · ville et aux valeurs de contact).
+
+
+## Correspondances (ProjectTour)
+
+Ajout du 18 septembre 2026. Une station peut ouvrir une ligne secondaire : une rangée d'arrêts
+(`role="tablist"`, navigation aux flèches) sur un trait de 3 px, le segment parcouru dans la
+couleur de la station, l'arrêt actif plein et haloé (`rgba(var(--s-rgb), 0.18)`). Un seul
+panneau à la fois, texte 5/12 et visuels 7/12 au-delà de `lg`, entrée en fondu + 14 px.
+Cadres disponibles : navigateur, téléphone (écran couvert, `object-fit: cover`, sauf capture
+défilante), tablette (16/9, bezel 14 px, rayon 22 px), photo (4/3) et cadre nu (`plain`,
+ratio naturel, pour les captures basse résolution). Étiquettes : « Interface réelle » (fond
+teinté) ou « Maquette » (bord pointillé).

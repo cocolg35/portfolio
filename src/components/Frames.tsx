@@ -55,3 +55,30 @@ export function PhoneFrame({ src, alt, className, scrolls }: { src: string; alt:
     </figure>
   )
 }
+
+export function TabletFrame({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  return (
+    <figure className={[styles.tablet, className].filter(Boolean).join(' ')}>
+      <div className={styles.tabletScreen}>
+        <img src={src} alt={alt} loading="lazy" decoding="async" />
+      </div>
+    </figure>
+  )
+}
+
+export function PhotoFrame({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  return (
+    <figure className={[styles.photo, className].filter(Boolean).join(' ')}>
+      <img src={src} alt={alt} loading="lazy" decoding="async" />
+    </figure>
+  )
+}
+
+/** A bare dark frame that keeps the image's own aspect ratio. */
+export function PlainFrame({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  return (
+    <figure className={[styles.plain, className].filter(Boolean).join(' ')}>
+      <img src={src} alt={alt} loading="lazy" decoding="async" />
+    </figure>
+  )
+}

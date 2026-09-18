@@ -24,12 +24,20 @@ quels produits, quelle échelle, quelles technologies.
   70 % traitées en moins de 36 h). Captures : gap.soinsvirtuels.gouv.qc.ca (site public).
 - Expretio (janv. 2022 – août 2023, Montréal) : Appia 5, revenue management rail,
   20+ opérateurs (expretio.com), Renfe client de référence. Captures : expretio.com/solutions/appia.
-- 360.Agency (janv. 2018 – janv. 2022, Montréal) : Showroom 360-V2. Visuels : 360.agency.
+  Côté professionnel (plateforme Linx) confidentiel : maquettes publiques akinox.com (FR).
+- 360.Agency (janv. 2018 – janv. 2022, Montréal) : Showroom 360-V2. Visuels : 360.agency
+  et captures du produit en situation sur gmileperrot.ca (septembre 2026) : inventaires neuf
+  et occasion, fiches, calculatrice de paiements, magasiner en ligne, configurateur, garage.
 - Facilité Informatique (oct. 2016 – sept. 2017, Montréal) : refonte React d'un produit
-  client non nommé. Société rachetée par CGI en 2018. Aucun visuel public : illustration.
-- Ville de Lorient (sept. 2013 – sept. 2016) : application Windows 8.1 pour un pôle
-  muséal, applications mobiles hybrides de signalement. Aucun visuel public : illustration.
-  L'application « Lorient et moi » (2017, Be attractive) n'est PAS attribuée à Corentin.
+  pour le client Vidéotron. Société rachetée par CGI en 2018, n'existe plus sous ce nom.
+  Aucun visuel public : illustration.
+- Ville de Lorient (sept. 2013 – sept. 2016, alternance à la DOSI) : six projets documentés
+  par les rapports de mission et captures d'époque fournis par Corentin
+  (~/Desktop/projets lorient) : Musée de la Compagnie des Indes (tablette Windows 8.1, 2014),
+  SIV grand public + tablette agents (2015), Annuaire Mobile (2015), LO.géo portail SIG (2015),
+  Carnet d'Urgence (2016), Lorient dans ma poche (maquettes 2016, réalisation ensuite confiée
+  à Be Attractive → « Lorient et moi », 2017, qui n'est PAS attribuée à Corentin).
+  Écrans contenant des numéros de téléphone ou contacts personnels exclus.
 
 ## Engagements de marque
 - Sombre et immersif (choix utilisateur), one-page storytelling, FR par défaut + EN.
