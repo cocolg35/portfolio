@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import type { VisualKind } from '../i18n/types'
 import { useLang } from '../i18n/LangContext'
 import { BrowserFrame, PhoneFrame, PhotoFrame, Tilt } from './Frames'
+import { Deck } from './Deck'
 import styles from './Visuals.module.scss'
 
 export function StationVisual({ kind }: { kind: VisualKind }) {
@@ -51,46 +51,15 @@ const APPIA_SCREENS = [
 
 function AppiaVisual() {
   const { lang } = useLang()
-  const [front, setFront] = useState(0)
   return (
-    <div className={styles.appia}>
-      <Tilt className={styles.deckScene} max={5}>
-        <div className={styles.deck}>
-          {APPIA_SCREENS.map((s, i) => {
-            const pos = (i - front + APPIA_SCREENS.length) % APPIA_SCREENS.length
-            return (
-              <button
-                type="button"
-                key={s.id}
-                className={styles.deckCard}
-                data-pos={pos}
-                onClick={() => setFront(i)}
-                aria-label={lang === 'fr' ? `Afficher : ${s.fr}` : `Show: ${s.en}`}
-                aria-pressed={pos === 0}
-                tabIndex={pos === 0 ? -1 : 0}
-              >
-                <BrowserFrame src={s.src} alt={`Appia — ${lang === 'fr' ? s.fr : s.en}`} url="appia — expretio" eager={i === 0} />
-              </button>
-            )
-          })}
-        </div>
-      </Tilt>
-      <div className={styles.deckTabs} role="tablist" aria-label="Appia">
-        {APPIA_SCREENS.map((s, i) => (
-          <button
-            type="button"
-            role="tab"
-            key={s.id}
-            aria-selected={front === i}
-            className={styles.deckTab}
-            onClick={() => setFront(i)}
-          >
-            <span className={styles.deckIndex}>{String(i + 1).padStart(2, '0')}</span>
-            {lang === 'fr' ? s.fr : s.en}
-          </button>
-        ))}
-      </div>
-    </div>
+    <Deck
+      ariaLabel="Appia"
+      className={styles.appia}
+      cards={APPIA_SCREENS.map((s, i) => {
+        const label = lang === 'fr' ? s.fr : s.en
+        return { key: s.id, label, node: <BrowserFrame src={s.src} alt={`Appia — ${label}`} url="appia — expretio" eager={i === 0} /> }
+      })}
+    />
   )
 }
 

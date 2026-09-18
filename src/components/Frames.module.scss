@@ -174,3 +174,10 @@
   padding: 6px;
   img { width: 100%; border-radius: 6px; }
 }
+
+.icon {
+  border-radius: 22%;
+  overflow: hidden;
+  box-shadow: 0 18px 30px -14px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+}

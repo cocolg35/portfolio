@@ -7,7 +7,7 @@ export interface Figure {
   label: string
 }
 
-export type FrameKind = 'browser' | 'phone' | 'tablet' | 'photo' | 'plain'
+export type FrameKind = 'browser' | 'phone' | 'tablet' | 'photo' | 'plain' | 'icon'
 
 export interface TourVisual {
   frame: FrameKind
@@ -18,6 +18,8 @@ export interface TourVisual {
   small?: boolean
   /** Rendered with an older design (e.g. a retro look). */
   old?: boolean
+  /** Short name shown on the deck tab when visuals are stacked. */
+  label?: string
 }
 
 export type TourKind = 'real' | 'mockup'
@@ -38,6 +40,8 @@ export interface Tour {
   title: string
   lede: string
   items: TourItem[]
+  /** Group each item's visuals by frame and stack each group as a clickable deck. */
+  stacked?: boolean
 }
 
 export interface Station {
@@ -93,6 +97,7 @@ export interface Content {
     screenshotLabel: string
     mockupLabel: string
     tourAria: string
+    show: string
     sourceLabel: string
     yourHere: string
   }

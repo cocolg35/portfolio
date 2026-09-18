@@ -336,3 +336,13 @@ Cadres disponibles : navigateur, téléphone (écran couvert, `object-fit: cover
 défilante), tablette (16/9, bezel 14 px, rayon 22 px), photo (4/3) et cadre nu (`plain`,
 ratio naturel, pour les captures basse résolution). Étiquettes : « Interface réelle » (fond
 teinté) ou « Maquette » (bord pointillé).
+
+### Piles (Deck)
+
+Le composant `Deck` (src/components/Deck.tsx) est la pile d'écrans partagée : Appia l'utilise,
+et toute visite guidée marquée `stacked: true` regroupe les visuels d'un arrêt par type de cadre
+(navigateur, tablette, téléphone, photo, cadre nu) en une pile par groupe. Trois cartes visibles
+au plus (avant, -60 px, -140 px de profondeur), les suivantes masquées ; onglets `01`, `02`…
+sous la pile, flèches du clavier. Les décalages se règlent par groupe avec `--dx` / `--dy`
+(plus large pour les téléphones, plus court en hauteur). L'icône d'app (`icon`) ne se pile pas.
+En mobile, la ligne d'arrêts passe en deux colonnes ; chaque arrêt dessine son propre segment.

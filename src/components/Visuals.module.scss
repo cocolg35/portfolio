@@ -22,74 +22,8 @@
 
 /* ---------- Appia ---------- */
 .appia {
-  display: grid;
-  gap: 20px;
-}
-.deckScene {
-  padding: 6% 8% 10% 2%;
-}
-.deck {
-  position: relative;
-  aspect-ratio: 16 / 11;
-  transform-style: preserve-3d;
-}
-.deckCard {
-  @include focus-ring;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  text-align: left;
-  transform-style: preserve-3d;
-  transition: transform 0.7s var(--ease-out), opacity 0.5s, filter 0.5s;
-  cursor: pointer;
-
-  &[data-pos="0"] {
-    z-index: 3;
-    transform: translate3d(0, 0, 40px) rotateY(0deg);
-    cursor: default;
-  }
-  &[data-pos="1"] {
-    z-index: 2;
-    transform: translate3d(8%, 6%, -60px) rotateY(-6deg);
-    filter: brightness(0.7);
-  }
-  &[data-pos="2"] {
-    z-index: 1;
-    transform: translate3d(16%, 12%, -140px) rotateY(-10deg);
-    filter: brightness(0.45);
-  }
-  @include hover {
-    &:not([data-pos="0"]) { filter: brightness(0.9); }
-  }
-}
-
-.deckTabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.deckTab {
-  @include signage(112, 600);
-  @include focus-ring;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7em;
-  padding: 0.9em 1.1em;
-  border-radius: 999px;
-  border: 1px solid var(--edge);
-  color: var(--paper-3);
-  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
-  @include hover { color: var(--paper); border-color: var(--edge-strong); }
-  &[aria-selected="true"] {
-    color: var(--paper);
-    border-color: var(--station);
-    background: rgba(var(--station-rgb), 0.12);
-  }
-}
-.deckIndex {
-  @include mono(600);
-  font-size: 0.7em;
-  color: var(--station);
+  --dx: 10%;
+  --dy: 9%;
 }
 
 /* ---------- Showroom ---------- */

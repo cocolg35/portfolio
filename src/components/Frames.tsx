@@ -82,3 +82,12 @@ export function PlainFrame({ src, alt, className }: { src: string; alt: string; 
     </figure>
   )
 }
+
+/** A bare app icon, rounded like a home-screen tile. */
+export function IconFrame({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  return (
+    <figure className={[styles.icon, className].filter(Boolean).join(' ')}>
+      <img src={src} alt={alt} loading="lazy" decoding="async" />
+    </figure>
+  )
+}
