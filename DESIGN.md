@@ -345,4 +345,6 @@ et toute visite guidée marquée `stacked: true` regroupe les visuels d'un arrê
 au plus (avant, -60 px, -140 px de profondeur), les suivantes masquées ; onglets `01`, `02`…
 sous la pile, flèches du clavier. Les décalages se règlent par groupe avec `--dx` / `--dy`
 (plus large pour les téléphones, plus court en hauteur). L'icône d'app (`icon`) ne se pile pas.
-En mobile, la ligne d'arrêts passe en deux colonnes ; chaque arrêt dessine son propre segment.
+En mobile, la ligne d'arrêts serpente sur deux colonnes comme un plan de ligne : rangées impaires
+de droite à gauche, virage arrondi (14 px, bord 3 px) sur le bord extérieur porté par le dernier
+arrêt de la rangée ; chaque arrêt dessine son propre segment et la progression colorée suit le tracé.

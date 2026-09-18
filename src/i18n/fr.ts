@@ -166,6 +166,7 @@ export const fr: Content = {
       tour: {
         title: 'Le produit en situation : Chevrolet Buick GMC Île-Perrot',
         lede: 'Showroom 360 s’installe sur le site de chaque concessionnaire. Captures réalisées en septembre 2026 sur gmileperrot.ca, un site propulsé par 360.Agency, pour garder une trace du parcours d’achat complet.',
+        stacked: true,
         items: [
           {
             id: 'neuf',
@@ -173,8 +174,8 @@ export const fr: Content = {
             title: 'Inventaire et fiche d’un véhicule neuf',
             text: 'Inventaire filtrable par catégorie, carrosserie, marque, année, transmission et carburant, chaque carte affichant le paiement calculé selon le mode choisi : location, financement ou achat. La fiche détaille prix, paiement aux deux semaines, taux et frais de crédit, puis les actions : calculatrice, demande d’information, essai routier. La barre « Sauvez ce véhicule et votre transaction » alimente le garage.',
             visuals: [
-              { frame: 'browser', src: '/projects/gm/neuf-inventaire.jpg', alt: 'Grille de véhicules neufs avec paiements aux deux semaines', url: 'gmileperrot.ca/fr/inventaire-neuf' },
-              { frame: 'browser', src: '/projects/gm/neuf-detail.jpg', alt: 'Fiche Chevrolet Trax LT 2026 avec bouton Ajouter au garage', url: 'gmileperrot.ca/fr/inventaire-neuf/chevrolet/trax/…' },
+              { frame: 'browser', src: '/projects/gm/neuf-inventaire.jpg', alt: 'Grille de véhicules neufs avec paiements aux deux semaines', url: 'gmileperrot.ca/fr/inventaire-neuf', label: 'Inventaire' },
+              { frame: 'browser', src: '/projects/gm/neuf-detail.jpg', alt: 'Fiche Chevrolet Trax LT 2026 avec bouton Ajouter au garage', url: 'gmileperrot.ca/fr/inventaire-neuf/chevrolet/trax/…', label: 'Fiche' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, septembre 2026',
@@ -194,8 +195,8 @@ export const fr: Content = {
             title: 'Inventaire et fiche d’occasion',
             text: 'Plus de 240 véhicules d’occasion avec rabais, rapport CARFAX et disponibilité dans les concessions du groupe. La fiche propose la réservation en ligne et l’ajout au garage.',
             visuals: [
-              { frame: 'browser', src: '/projects/gm/occasion-inventaire.jpg', alt: 'Grille de véhicules d’occasion', url: 'gmileperrot.ca/fr/inventaire-occasion' },
-              { frame: 'browser', src: '/projects/gm/occasion-detail.jpg', alt: 'Fiche GMC Sierra 1500 Limited 2019 avec réservation en ligne', url: 'gmileperrot.ca/fr/inventaire-occasion/gmc/…' },
+              { frame: 'browser', src: '/projects/gm/occasion-inventaire.jpg', alt: 'Grille de véhicules d’occasion', url: 'gmileperrot.ca/fr/inventaire-occasion', label: 'Inventaire' },
+              { frame: 'browser', src: '/projects/gm/occasion-detail.jpg', alt: 'Fiche GMC Sierra 1500 Limited 2019 avec réservation en ligne', url: 'gmileperrot.ca/fr/inventaire-occasion/gmc/…', label: 'Fiche' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, septembre 2026',
@@ -206,10 +207,10 @@ export const fr: Content = {
             title: 'Magasiner en ligne et construire son véhicule',
             text: 'Magasiner : recherche par modèle et carrosserie, saisie de la valeur d’échange, puis catalogue des modèles neufs avec prix « à partir de » et paiement de location calculé. Depuis un modèle, le configurateur enchaîne six étapes : année, version, performance, confort, options et accessoires, confirmation. Le véhicule construit rejoint la transaction avec ses paiements.',
             visuals: [
-              { frame: 'browser', src: '/projects/gm/magasiner.jpg', alt: 'Page Magasiner en ligne : recherche par carrosserie et valeur d’échange', url: 'gmileperrot.ca/fr/magasiner-en-ligne' },
-              { frame: 'browser', src: '/projects/gm/configurateur-1.jpg', alt: 'Configurateur Chevrolet Trailblazer : sélection de l’année', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
-              { frame: 'browser', src: '/projects/gm/configurateur-2.png', alt: 'Configurateur Chevrolet Trailblazer : sélection de la version', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
-              { frame: 'browser', src: '/projects/gm/configurateur-3.png', alt: 'Configurateur Chevrolet Trailblazer : sélection des accessoires', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/magasiner.jpg', alt: 'Page Magasiner en ligne : recherche par carrosserie et valeur d’échange', url: 'gmileperrot.ca/fr/magasiner-en-ligne', label: 'Magasiner' },
+              { frame: 'browser', src: '/projects/gm/configurateur-1.jpg', alt: 'Configurateur Chevrolet Trailblazer : sélection de l’année', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…', label: 'Année' },
+              { frame: 'browser', src: '/projects/gm/configurateur-2.jpg', alt: 'Configurateur Chevrolet Trailblazer : sélection de la version', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…', label: 'Version' },
+              { frame: 'browser', src: '/projects/gm/configurateur-3.jpg', alt: 'Configurateur Chevrolet Trailblazer : sélection des accessoires', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…', label: 'Accessoires' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, septembre 2026',

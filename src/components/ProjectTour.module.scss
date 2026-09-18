@@ -31,13 +31,16 @@
 }
 
 /* ---------- the branch line ---------- */
-/* Two columns on phones, one flowing row from md up. Each stop draws its own
-   segment of the line so the line survives wrapping. */
+/* Phones: the stops snake over two columns like a route map, odd rows running
+   right to left, joined by a U-turn on the outer edge. From md up: one row. */
 .branch {
+  --row-gap: 12px;
+  --line-y: 9px;
+  --dot-x: 16px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 6px 0;
+  gap: var(--row-gap) 0;
   padding-block: 8px 4px;
   margin-inline: -4px;
   @include md {
@@ -54,48 +57,74 @@
   position: relative;
   min-width: 0;
   display: grid;
+  align-content: start;
   justify-items: start;
   gap: 8px;
   padding: 2px 16px 6px 8px;
   text-align: left;
   color: var(--paper-3);
   transition: color 0.25s;
+  grid-row: var(--r);
+  grid-column: var(--c);
   @include md {
     flex: 0 0 auto;
     min-width: 120px;
     padding-right: 22px;
+    grid-row: auto;
+    grid-column: auto;
   }
 
-  &::after {
-    /* ghost segment of the line */
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 9px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.09);
-  }
-  &:last-child::after { right: auto; width: 16px; }
-
+  /* ghost line, then the coloured line up to the active stop */
+  &::after,
   &::before {
-    /* coloured segment of the line up to this stop */
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    top: 9px;
+    top: var(--line-y);
     height: 3px;
+  }
+  &::after { background: rgba(255, 255, 255, 0.09); }
+  &::before {
     z-index: 1;
     background: var(--s);
     opacity: 0;
     transition: opacity 0.3s;
   }
   &[data-passed]::before { opacity: 1; }
-  &[data-active]::before { opacity: 1; right: 50%; }
-  &:last-child[data-active]::before { right: auto; width: 16px; }
+  &[data-active]::before { opacity: 1; right: auto; width: var(--dot-x); }
+
+  /* the line begins and ends on a dot */
+  &:first-child::after { left: var(--dot-x); }
+  &:last-child::after { right: auto; width: var(--dot-x); }
 
   &[data-active], &:hover { color: var(--paper); }
+}
+
+/* right-to-left rows: the line reaches each dot from the right */
+@media (max-width: #{$bp-md - 1px}) {
+  .stop[data-rtl] {
+    &[data-active]::before { left: var(--dot-x); right: 0; width: auto; }
+    &:last-child::after { left: var(--dot-x); right: 0; width: auto; }
+  }
+}
+
+.turn {
+  display: none;
+  position: absolute;
+  top: var(--line-y);
+  bottom: calc(-1 * (var(--row-gap) + var(--line-y) + 3px));
+  width: 14px;
+  border: 3px solid rgba(255, 255, 255, 0.09);
+  transition: border-color 0.3s;
+  pointer-events: none;
+
+  /* even rows turn on the right edge, odd rows on the left */
+  .stop:not([data-rtl]) & { right: -14px; border-left: 0; border-radius: 0 999px 999px 0; }
+  .stop[data-rtl] & { left: -14px; border-right: 0; border-radius: 999px 0 0 999px; }
+  .stop[data-passed] & { border-color: var(--s); }
+
+  @media (max-width: #{$bp-md - 1px}) { display: block; }
 }
 
 .stopDot {

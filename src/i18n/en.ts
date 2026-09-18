@@ -166,6 +166,7 @@ export const en: Content = {
       tour: {
         title: 'The product in the wild: Chevrolet Buick GMC Île-Perrot',
         lede: 'Showroom 360 is installed on each dealership’s website. Screenshots taken in September 2026 on gmileperrot.ca, a site powered by 360.Agency, to keep a record of the full buying journey.',
+        stacked: true,
         items: [
           {
             id: 'neuf',
@@ -173,8 +174,8 @@ export const en: Content = {
             title: 'New vehicle inventory and detail page',
             text: 'Inventory filterable by category, body style, make, year, transmission and fuel, every card showing the payment computed for the chosen mode: lease, finance or cash. The detail page lays out price, bi-weekly payment, rate and credit fees, then the actions: calculator, information request, test drive. The “Save this vehicle and your transaction” bar feeds the garage.',
             visuals: [
-              { frame: 'browser', src: '/projects/gm/neuf-inventaire.jpg', alt: 'Grid of new vehicles with bi-weekly payments', url: 'gmileperrot.ca/fr/inventaire-neuf' },
-              { frame: 'browser', src: '/projects/gm/neuf-detail.jpg', alt: 'Chevrolet Trax LT 2026 detail page with Add to garage button', url: 'gmileperrot.ca/fr/inventaire-neuf/chevrolet/trax/…' },
+              { frame: 'browser', src: '/projects/gm/neuf-inventaire.jpg', alt: 'Grid of new vehicles with bi-weekly payments', url: 'gmileperrot.ca/fr/inventaire-neuf', label: 'Inventory' },
+              { frame: 'browser', src: '/projects/gm/neuf-detail.jpg', alt: 'Chevrolet Trax LT 2026 detail page with Add to garage button', url: 'gmileperrot.ca/fr/inventaire-neuf/chevrolet/trax/…', label: 'Detail page' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, September 2026',
@@ -194,8 +195,8 @@ export const en: Content = {
             title: 'Used inventory and detail page',
             text: 'More than 240 used vehicles with rebates, CARFAX report and availability across the group’s dealerships. The detail page offers online reservation and add to garage.',
             visuals: [
-              { frame: 'browser', src: '/projects/gm/occasion-inventaire.jpg', alt: 'Grid of used vehicles', url: 'gmileperrot.ca/fr/inventaire-occasion' },
-              { frame: 'browser', src: '/projects/gm/occasion-detail.jpg', alt: 'GMC Sierra 1500 Limited 2019 detail page with online reservation', url: 'gmileperrot.ca/fr/inventaire-occasion/gmc/…' },
+              { frame: 'browser', src: '/projects/gm/occasion-inventaire.jpg', alt: 'Grid of used vehicles', url: 'gmileperrot.ca/fr/inventaire-occasion', label: 'Inventory' },
+              { frame: 'browser', src: '/projects/gm/occasion-detail.jpg', alt: 'GMC Sierra 1500 Limited 2019 detail page with online reservation', url: 'gmileperrot.ca/fr/inventaire-occasion/gmc/…', label: 'Detail page' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, September 2026',
@@ -206,10 +207,10 @@ export const en: Content = {
             title: 'Shop online and build your vehicle',
             text: 'Shop online: search by model and body style, trade-in value entry, then the catalogue of new models with “from” prices and computed lease payments. From a model, the builder runs six steps: year, trim, performance, comfort, options and accessories, confirmation. The built vehicle joins the transaction with its payments.',
             visuals: [
-              { frame: 'browser', src: '/projects/gm/magasiner.jpg', alt: 'Shop online page: search by body style and trade-in value', url: 'gmileperrot.ca/fr/magasiner-en-ligne' },
-              { frame: 'browser', src: '/projects/gm/configurateur-1.jpg', alt: 'Chevrolet Trailblazer builder: year selection', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
-              { frame: 'browser', src: '/projects/gm/configurateur-2.png', alt: 'Chevrolet Trailblazer builder: trim selection', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
-              { frame: 'browser', src: '/projects/gm/configurateur-3.png', alt: 'Chevrolet Trailblazer builder: options and accessories', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/magasiner.jpg', alt: 'Shop online page: search by body style and trade-in value', url: 'gmileperrot.ca/fr/magasiner-en-ligne', label: 'Shop' },
+              { frame: 'browser', src: '/projects/gm/configurateur-1.jpg', alt: 'Chevrolet Trailblazer builder: year selection', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…', label: 'Year' },
+              { frame: 'browser', src: '/projects/gm/configurateur-2.jpg', alt: 'Chevrolet Trailblazer builder: trim selection', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…', label: 'Trim' },
+              { frame: 'browser', src: '/projects/gm/configurateur-3.jpg', alt: 'Chevrolet Trailblazer builder: options and accessories', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…', label: 'Accessories' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, September 2026',

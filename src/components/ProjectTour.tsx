@@ -79,25 +79,36 @@ export function ProjectTour({ tour, stationColor }: { tour: Tour; stationColor: 
       </header>
 
       <div className={styles.branch} role="tablist" aria-label={t.journey.tourAria} ref={tabsRef} onKeyDown={onKey}>
-        {tour.items.map((it, i) => (
-          <button
-            key={it.id}
-            type="button"
-            role="tab"
-            id={`${baseId}-tab-${it.id}`}
-            aria-selected={i === active}
-            aria-controls={`${baseId}-panel`}
-            tabIndex={i === active ? 0 : -1}
-            className={styles.stop}
-            data-active={i === active || undefined}
-            data-passed={i < active || undefined}
-            onClick={() => setActive(i)}
-          >
-            <span className={styles.stopDot} aria-hidden="true" />
-            <span className={styles.stopLabel}>{it.label}</span>
-            {it.year && <span className={styles.stopYear}>{it.year}</span>}
-          </button>
-        ))}
+        {tour.items.map((it, i) => {
+          // On phones the stops snake over two columns: odd rows run right to left,
+          // and the outer stop of each row carries the U-turn down to the next row.
+          const row = Math.floor(i / 2)
+          const rtl = row % 2 === 1
+          const col = rtl ? 2 - (i % 2) : 1 + (i % 2)
+          const turn = i % 2 === 1 && i < tour.items.length - 1
+          return (
+            <button
+              key={it.id}
+              type="button"
+              role="tab"
+              id={`${baseId}-tab-${it.id}`}
+              aria-selected={i === active}
+              aria-controls={`${baseId}-panel`}
+              tabIndex={i === active ? 0 : -1}
+              className={styles.stop}
+              data-active={i === active || undefined}
+              data-passed={i < active || undefined}
+              data-rtl={rtl || undefined}
+              style={{ ['--r' as string]: row + 1, ['--c' as string]: col }}
+              onClick={() => setActive(i)}
+            >
+              <span className={styles.stopDot} aria-hidden="true" />
+              <span className={styles.stopLabel}>{it.label}</span>
+              {it.year && <span className={styles.stopYear}>{it.year}</span>}
+              {turn && <span className={styles.turn} aria-hidden="true" />}
+            </button>
+          )
+        })}
       </div>
 
       <div className={styles.panelWrap} id={`${baseId}-panel`} role="tabpanel" aria-labelledby={`${baseId}-tab-${item.id}`}>
