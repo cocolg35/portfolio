@@ -207,7 +207,9 @@ export const en: Content = {
             text: 'Shop online: search by model and body style, trade-in value entry, then the catalogue of new models with “from” prices and computed lease payments. From a model, the builder runs six steps: year, trim, performance, comfort, options and accessories, confirmation. The built vehicle joins the transaction with its payments.',
             visuals: [
               { frame: 'browser', src: '/projects/gm/magasiner.jpg', alt: 'Shop online page: search by body style and trade-in value', url: 'gmileperrot.ca/fr/magasiner-en-ligne' },
-              { frame: 'browser', src: '/projects/gm/configurateur.jpg', alt: 'Chevrolet Trailblazer builder: year selection', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/configurateur-1.jpg', alt: 'Chevrolet Trailblazer builder: year selection', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/configurateur-2.png', alt: 'Chevrolet Trailblazer builder: trim selection', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/configurateur-3.png', alt: 'Chevrolet Trailblazer builder: options and accessories', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, September 2026',

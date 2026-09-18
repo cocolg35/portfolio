@@ -207,7 +207,9 @@ export const fr: Content = {
             text: 'Magasiner : recherche par modèle et carrosserie, saisie de la valeur d’échange, puis catalogue des modèles neufs avec prix « à partir de » et paiement de location calculé. Depuis un modèle, le configurateur enchaîne six étapes : année, version, performance, confort, options et accessoires, confirmation. Le véhicule construit rejoint la transaction avec ses paiements.',
             visuals: [
               { frame: 'browser', src: '/projects/gm/magasiner.jpg', alt: 'Page Magasiner en ligne : recherche par carrosserie et valeur d’échange', url: 'gmileperrot.ca/fr/magasiner-en-ligne' },
-              { frame: 'browser', src: '/projects/gm/configurateur.jpg', alt: 'Configurateur Chevrolet Trailblazer : sélection de l’année', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/configurateur-1.jpg', alt: 'Configurateur Chevrolet Trailblazer : sélection de l’année', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/configurateur-2.png', alt: 'Configurateur Chevrolet Trailblazer : sélection de la version', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
+              { frame: 'browser', src: '/projects/gm/configurateur-3.png', alt: 'Configurateur Chevrolet Trailblazer : sélection des accessoires', url: 'gmileperrot.ca/fr/catalogue-neuf/CHEVROLET/trailblazer/…' },
             ],
             kind: 'real',
             credit: 'gmileperrot.ca, septembre 2026',
