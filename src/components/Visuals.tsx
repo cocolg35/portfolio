@@ -19,27 +19,31 @@ export function StationVisual({ kind }: { kind: VisualKind }) {
   }
 }
 
+const GAP_SCREENS = [
+  { id: 'accueil', fr: 'Accueil', en: 'Home', altFr: 'Page d’accueil du Guichet d’accès à la première ligne numérique', altEn: 'Home page of the digital primary care access point' },
+  { id: 'besoin', fr: 'Besoin de santé', en: 'Health need', altFr: 'Choix du besoin de santé parmi huit catégories', altEn: 'Choosing the health need among eight categories' },
+  { id: 'orientation', fr: 'Orientation', en: 'Referral', altFr: 'Informations d’orientation : code postal et numéro d’assurance maladie', altEn: 'Referral information: postal code and health insurance number' },
+]
+
+/** Three steps of the GAP, each card pairing the desktop page with its mobile counterpart. */
 function GapVisual() {
   const { lang } = useLang()
-  const alt =
-    lang === 'fr'
-      ? 'Page d’accueil du Guichet d’accès à la première ligne numérique du Gouvernement du Québec'
-      : 'Home page of the Québec government digital primary care access point'
+  const fr = lang === 'fr'
   return (
-    <div className={styles.gapStack}>
-      <Tilt className={styles.gap}>
-        <BrowserFrame src="/projects/gap-desktop-1.png" alt={alt} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} />
-        <PhoneFrame src="/projects/gap-mobile-1.png" alt="" className={styles.gapPhone} scrolls />
-      </Tilt>
-      <Tilt className={styles.gap}>
-        <BrowserFrame src="/projects/gap-desktop-2.png" alt={alt} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} />
-        <PhoneFrame src="/projects/gap-mobile-2.png" alt="" className={styles.gapPhone} scrolls />
-      </Tilt>
-      <Tilt className={styles.gap}>
-        <BrowserFrame src="/projects/gap-desktop-3.png" alt={alt} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} />
-        <PhoneFrame src="/projects/gap-mobile-3.png" alt="" className={styles.gapPhone} scrolls />
-      </Tilt>
-    </div>
+    <Deck
+      ariaLabel="GAP"
+      className={styles.gapDeck}
+      cards={GAP_SCREENS.map((s, i) => ({
+        key: s.id,
+        label: fr ? s.fr : s.en,
+        node: (
+          <div className={styles.gap}>
+            <BrowserFrame src={`/projects/gap-desktop-${i + 1}.png`} alt={fr ? s.altFr : s.altEn} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} eager={i === 0} />
+            <PhoneFrame src={`/projects/gap-mobile-${i + 1}.png`} alt="" className={styles.gapPhone} scrolls />
+          </div>
+        ),
+      }))}
+    />
   )
 }
 

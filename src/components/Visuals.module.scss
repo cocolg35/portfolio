@@ -1,7 +1,7 @@
 /* ---------- GAP ---------- */
-.gapStack {
-  display: grid;
-  gap: fluid(28, 56);
+.gapDeck {
+  --dx: 10%;
+  --dy: 7%;
 }
 .gap {
   position: relative;
