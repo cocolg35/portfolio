@@ -1,4 +1,8 @@
 /* ---------- GAP ---------- */
+.gapStack {
+  display: grid;
+  gap: fluid(28, 56);
+}
 .gap {
   position: relative;
   padding-bottom: 12%;
