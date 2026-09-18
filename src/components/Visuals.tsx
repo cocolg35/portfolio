@@ -26,10 +26,20 @@ function GapVisual() {
       ? 'Page d’accueil du Guichet d’accès à la première ligne numérique du Gouvernement du Québec'
       : 'Home page of the Québec government digital primary care access point'
   return (
-    <Tilt className={styles.gap}>
-      <BrowserFrame src="/projects/gap-desktop-crop.png" alt={alt} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} />
-      <PhoneFrame src="/projects/gap-mobile.png" alt="" className={styles.gapPhone} scrolls />
-    </Tilt>
+    <>
+      <Tilt className={styles.gap}>
+        <BrowserFrame src="/projects/gap-desktop-1.png" alt={alt} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} />
+        <PhoneFrame src="/projects/gap-mobile-1.png" alt="" className={styles.gapPhone} scrolls />
+      </Tilt>
+      <Tilt className={styles.gap}>
+        <BrowserFrame src="/projects/gap-desktop-2.png" alt={alt} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} />
+        <PhoneFrame src="/projects/gap-mobile-2.png" alt="" className={styles.gapPhone} scrolls />
+      </Tilt>
+      <Tilt className={styles.gap}>
+        <BrowserFrame src="/projects/gap-desktop-3.png" alt={alt} url="gap.soinsvirtuels.gouv.qc.ca" className={styles.gapDesktop} />
+        <PhoneFrame src="/projects/gap-mobile-3.png" alt="" className={styles.gapPhone} scrolls />
+      </Tilt>
+    </>
   )
 }
 
@@ -158,6 +168,7 @@ function LorientVisual() {
         src="/projects/lorient/siv-signalement.jpg"
         alt={fr ? 'Application SIV Lorient : formulaire de signalement Propreté et espaces verts' : 'SIV Lorient app: cleanliness and green spaces reporting form'}
         className={styles.lorientPhone}
+        old
       />
     </Tilt>
   )

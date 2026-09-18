@@ -45,11 +45,11 @@ export function BrowserFrame({ src, alt, url, className, eager, ratio }: { src: 
   )
 }
 
-export function PhoneFrame({ src, alt, className, scrolls }: { src: string; alt: string; className?: string; scrolls?: boolean }) {
+export function PhoneFrame({ src, alt, className, scrolls, old }: { src: string; alt: string; className?: string; scrolls?: boolean; old?: boolean }) {
   return (
-    <figure className={[styles.phone, className].filter(Boolean).join(' ')}>
-      <span className={styles.notch} aria-hidden="true" />
-      <div className={styles.phoneScreen} data-scrolls={scrolls || undefined}>
+    <figure className={[old ? styles.phoneOld : styles.phone, className].filter(Boolean).join(' ')}>
+      <span className={old ? undefined: styles.notch} aria-hidden="true" />
+      <div className={old ? styles.phoneScreenOld : styles.phoneScreen} data-scrolls={scrolls || undefined}>
         <img src={src} alt={alt} loading="lazy" decoding="async" />
       </div>
     </figure>

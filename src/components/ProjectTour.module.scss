@@ -46,7 +46,7 @@
   position: absolute;
   left: 4px;
   right: 4px;
-  top: 18px;
+  top: 17px;
   height: 3px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.09);
@@ -59,7 +59,7 @@
   display: grid;
   justify-items: start;
   gap: 8px;
-  padding: 2px 22px 6px 4px;
+  padding: 2px 22px 6px 8px;
   min-width: 120px;
   text-align: left;
   color: var(--paper-3);
@@ -71,7 +71,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 16px;
+    top: 9px;
     height: 3px;
     background: var(--s);
     opacity: 0;

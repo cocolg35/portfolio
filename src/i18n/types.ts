@@ -16,6 +16,8 @@ export interface TourVisual {
   url?: string
   /** Rendered smaller (e.g. a low-resolution capture). */
   small?: boolean
+  /** Rendered with an older design (e.g. a retro look). */
+  old?: boolean
 }
 
 export type TourKind = 'real' | 'mockup'

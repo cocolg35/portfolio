@@ -11,7 +11,7 @@ function Visual({ v }: { v: TourVisual }) {
     case 'browser':
       return <BrowserFrame src={v.src} alt={v.alt} url={v.url ?? ''} className={styles.browser} />
     case 'phone':
-      return <PhoneFrame src={v.src} alt={v.alt} className={v.small ? styles.phoneSmall : styles.phone} />
+      return <PhoneFrame src={v.src} alt={v.alt} className={v.small ? styles.phoneSmall : styles.phone} old={v.old} />
     case 'tablet':
       return <TabletFrame src={v.src} alt={v.alt} className={styles.tablet} />
     case 'photo':
