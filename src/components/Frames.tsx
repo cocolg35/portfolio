@@ -3,6 +3,9 @@ import type { PointerEvent, ReactNode } from 'react'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import styles from './Frames.module.scss'
 
+/** Public assets are referenced from the site root ('/projects/…'); prefix them with Vite's base. */
+const asset = (src: string) => (src.startsWith('/') ? import.meta.env.BASE_URL + src.slice(1) : src)
+
 /** Perspective tilt that follows the pointer. Inert on touch and reduced motion. */
 export function Tilt({ children, className, max = 7 }: { children: ReactNode; className?: string; max?: number }) {
   const reduced = useReducedMotion()
@@ -40,7 +43,7 @@ export function BrowserFrame({ src, alt, url, className, eager, ratio }: { src: 
         <span className={styles.lights}><i /><i /><i /></span>
         <span className={styles.url}>{url}</span>
       </div>
-      <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" style={ratio ? { aspectRatio: ratio } : undefined} />
+      <img src={asset(src)} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" style={ratio ? { aspectRatio: ratio } : undefined} />
     </figure>
   )
 }
@@ -50,7 +53,7 @@ export function PhoneFrame({ src, alt, className, scrolls, old }: { src: string;
     <figure className={[old ? styles.phoneOld : styles.phone, className].filter(Boolean).join(' ')}>
       <span className={old ? undefined: styles.notch} aria-hidden="true" />
       <div className={old ? styles.phoneScreenOld : styles.phoneScreen} data-scrolls={scrolls || undefined}>
-        <img src={src} alt={alt} loading="lazy" decoding="async" />
+        <img src={asset(src)} alt={alt} loading="lazy" decoding="async" />
       </div>
     </figure>
   )
@@ -60,7 +63,7 @@ export function TabletFrame({ src, alt, className }: { src: string; alt: string;
   return (
     <figure className={[styles.tablet, className].filter(Boolean).join(' ')}>
       <div className={styles.tabletScreen}>
-        <img src={src} alt={alt} loading="lazy" decoding="async" />
+        <img src={asset(src)} alt={alt} loading="lazy" decoding="async" />
       </div>
     </figure>
   )
@@ -69,7 +72,7 @@ export function TabletFrame({ src, alt, className }: { src: string; alt: string;
 export function PhotoFrame({ src, alt, className }: { src: string; alt: string; className?: string }) {
   return (
     <figure className={[styles.photo, className].filter(Boolean).join(' ')}>
-      <img src={src} alt={alt} loading="lazy" decoding="async" />
+      <img src={asset(src)} alt={alt} loading="lazy" decoding="async" />
     </figure>
   )
 }
@@ -78,7 +81,7 @@ export function PhotoFrame({ src, alt, className }: { src: string; alt: string; 
 export function PlainFrame({ src, alt, className }: { src: string; alt: string; className?: string }) {
   return (
     <figure className={[styles.plain, className].filter(Boolean).join(' ')}>
-      <img src={src} alt={alt} loading="lazy" decoding="async" />
+      <img src={asset(src)} alt={alt} loading="lazy" decoding="async" />
     </figure>
   )
 }
@@ -87,7 +90,7 @@ export function PlainFrame({ src, alt, className }: { src: string; alt: string; 
 export function IconFrame({ src, alt, className }: { src: string; alt: string; className?: string }) {
   return (
     <figure className={[styles.icon, className].filter(Boolean).join(' ')}>
-      <img src={src} alt={alt} loading="lazy" decoding="async" />
+      <img src={asset(src)} alt={alt} loading="lazy" decoding="async" />
     </figure>
   )
 }
