@@ -421,7 +421,7 @@ export const en: Content = {
   },
   contact: {
     title: 'Next stop?',
-    lede: 'I’m open to senior front-end and lead roles in Québec City, Montréal or remote. Write to me, I answer fast.',
+    lede: 'I’m open to senior front-end roles in Québec City or remote. Write to me, I answer fast.',
     email: 'c.legourrierec@hotmail.fr',
     phone: '(514) 662-3565',
     location: 'Québec City, Canada',

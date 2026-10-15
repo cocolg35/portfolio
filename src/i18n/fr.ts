@@ -421,7 +421,7 @@ export const fr: Content = {
   },
   contact: {
     title: 'Prochaine station ?',
-    lede: 'Je suis ouvert aux postes senior front-end et lead à Québec, à Montréal ou à distance. Écrivez-moi, je réponds vite.',
+    lede: 'Je suis ouvert aux postes senior front-end à Québec ou à distance. Écrivez-moi, je réponds vite.',
     email: 'c.legourrierec@hotmail.fr',
     phone: '(514) 662-3565',
     location: 'Québec, Canada',
